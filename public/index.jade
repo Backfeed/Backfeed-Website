@@ -2,8 +2,15 @@ doctype html
 head
     title Backfeed
     link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='lib/fullpage.js/dist/jquery.fullpage.css')
     link(rel='stylesheet', href='css/main.css')
     - console.log('\n' + new Date().toLocaleTimeString() + '\n'); console.log(JSON.stringify(public, null, '\t'));
 body
-    p
-    | ignore this
+    #fullpage
+        .section
+            h1 YAY!
+        .section
+            h2 NOOOOOO
+    script(src='lib/jquery/dist/jquery.js')
+    script(src='lib/fullpage.js/dist/jquery.fullpage.js')
+    script(src='js/main.js')
