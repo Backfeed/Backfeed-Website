@@ -1,16 +1,64 @@
-doctype html
-head
-    title Backfeed
-    link(rel='stylesheet', href='css/bootstrap.css')
-    link(rel='stylesheet', href='lib/fullpage.js/dist/jquery.fullpage.css')
-    link(rel='stylesheet', href='css/main.css')
-    - console.log('\n' + new Date().toLocaleTimeString() + '\n'); console.log(JSON.stringify(public, null, '\t'));
-body
-    #fullpage
-        .section
-            h1 YAY!
-        .section
-            h2 NOOOOOO
-    script(src='lib/jquery/dist/jquery.js')
-    script(src='lib/fullpage.js/dist/jquery.fullpage.js')
-    script(src='js/main.js')
+#fullpage.container
+    section
+        h1
+            | A Social Operating System
+            br
+            | for Decentralized Organizations
+        p.subtitle Enabling massive open source collaboration without central coordination
+    section
+        .row
+            .col-md-6
+                img(src="assets/images/imagine.png")
+            .col-md-6
+                h2 Imagine...
+                p
+                    | Facebook owned by its own users,
+                    br
+                    | decentralized transportation networks independent of Uber,
+                    br
+                    | markets dominated by open-source communities where contributors are also shareholders,
+                    br
+                    | and where the value created is redistributed both fairly and transparently.
+                    br
+                    | Imagine the innovative potential of such organisations
+                    br
+                    | decoupled from the rigidities of hierarchical structures.
+                    br
+                    | For all this and more…
+                p
+                    | Backfeed provides
+                    br
+                    | the infrastructure for decentralized cooperation
+        button.center-block Learn More
+    section
+        h2 The Infrastructure for Decentralized Cooperation
+        p Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
+    section
+        img(class="img-circle", src="http://placehold.it/100x100")
+        h3 Dynamic Power Distribution
+        p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys  in a decentralized network.
+        button Learn More
+    section
+        img(class="img-circle", src="http://placehold.it/100x100")
+        h3 Dynamic Power Distribution
+        p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys  in a decentralized network.
+        button Learn More
+    section
+        img(class="img-circle", src="http://placehold.it/100x100")
+        h3 Dynamic Power Distribution
+        p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys  in a decentralized network.
+        button Learn More
+    section
+        .row
+            .col-md-6
+                img(src="assets/images/applications.png")
+            .col-md-6
+                h2 Imagine...
+                p
+                    | Backfeed’s infrastructure comprises decentralized management tools, equity-sharing schemes, crowdsourcing mechanisms, and instruments for the collaborative evaluation and curation of content. The Backfeed protocol can fuel a variety of applications, including decentralized journalism, decentralized insurance, decentrarized ride-sharing applications,t and any other enterprise that would benefit from  the decentralized, indirect coordination of large groups of individuals.
+                p
+                    | With Backfeed, it will soon be possible to bootstrap decentralized organisations on top of the blockchain as easy as one would deploy a website today.
+        button.center-block Learn More
+    section
+        for partner in public.assets.images.partners._contents
+            img(src="assets/images/partners/#{ partner }")
