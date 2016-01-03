@@ -2,5 +2,7 @@ doctype html
 head
     != partial("_partials/head")
 body
+    != partial("_partials/header")
     != yield
+    != partial("_partials/footer")
     != partial("_partials/scripts")

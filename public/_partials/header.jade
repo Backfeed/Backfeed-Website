@@ -1,0 +1,13 @@
+.overlay
+    button.overlay-close Close
+    nav
+        ul
+            each url, name in menu
+                li
+                    a(href=url)= name
+header
+    .container-fluid
+        .row(style={"justify-content":"space-between"})
+            img(src="/assets/images/logo/favicon-32x32.png")
+            button#trigger-overlay
+                i.fa.fa-bars

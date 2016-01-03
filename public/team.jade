@@ -1,10 +1,9 @@
-h1 Team
 .container
     .team-members.row.text-xs-center
-        each member in public._data.team
+        each member in public._data.team.members
             != partial("_partials/team-member", { member: member })
-h1 Advisers
+h2 Advisers
 .container
     .team-members.row.text-xs-center
-        each member in public._data.advisers
+        each member in public._data.team.advisers
             != partial("_partials/team-member", { member: member })
