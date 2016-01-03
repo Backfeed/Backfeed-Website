@@ -1,1 +1,10 @@
-p team page
+h1 Team
+.container
+    .team-members.row.text-xs-center
+        each member in public._data.team
+            != partial("_partials/team-member", { member: member })
+h1 Advisers
+.container
+    .team-members.row.text-xs-center
+        each member in public._data.advisers
+            != partial("_partials/team-member", { member: member })

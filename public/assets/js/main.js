@@ -6,6 +6,8 @@ $(document).ready(function() {
     mediaCheck({
         media: '(min-width: 768px)',
         entry: function() {
+            var currentIndex = $('.fp-section').index($('.active'));
+
             $.fn.fullpage.destroy('all');
 
             var protocolSection = $('#infrastructure-for-decentralized-cooperation');
@@ -24,6 +26,8 @@ $(document).ready(function() {
             protocolSection.next().remove();
 
             initFullPage(fullPageContainer);
+
+            if (currentIndex !== -1 ) $.fn.fullpage.moveTo(currentIndex);
         },
         exit: function() {
             console.log('leaving 420');
