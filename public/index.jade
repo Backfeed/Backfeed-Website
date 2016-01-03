@@ -5,7 +5,7 @@ body(class="#{current.path} #{page_title}")
     != partial("_partials/header")
     main#fullpage.container
         section
-            h1
+            p.big-title
                 | A Social Operating System
                 br
                 | for Decentralized Organizations
@@ -68,6 +68,7 @@ body(class="#{current.path} #{page_title}")
                         | With Backfeed, it will soon be possible to bootstrap decentralized organisations on top of the blockchain as easy as one would deploy a website today.
             a.btn.center-block(href="/explore-in-depth") Learn More
         section
+            h2 Partners
             .row(style={"justify-content": "center"})
                 for partner in public.assets.images.partners._contents
                     img(src="assets/images/partners/#{ partner }")
