@@ -122,5 +122,11 @@
   },
   "explore-in-depth": {
     "page_title": "Explore in Depth"
+  },
+  "menu": {
+    "Home": "/",
+    "Technical Resources": "/technical-resources",
+    "Explore in Depth": "/explore-in-depth",
+    "Team": "/team"
   }
 }

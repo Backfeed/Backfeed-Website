@@ -17,19 +17,16 @@ $(document).ready(function() {
     function mobilizeProtocolSection() {
         $.fn.fullpage.destroy('all');
 
-        var protocolSection = $('#infrastructure-for-decentralized-cooperation');
-        var protocolSectionRow = $('<div class="row"></div>').appendTo(protocolSection);
+        var protocolSection = $('#protocol');
+        var protocolSectionRow = protocolSection.find('.protocol-features');
 
-        var protocolSectionNextCol = $('<div class="col-sm-4"></div>').appendTo(protocolSectionRow);
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionNextCol);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSectionNextCol = $('<div class="col-sm-4"></div>').appendTo(protocolSectionRow);
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionNextCol);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSectionNextCol = $('<div class="col-sm-4"></div>').appendTo(protocolSectionRow);
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionNextCol);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
         initFullPage(fullPageContainer);
@@ -43,6 +40,12 @@ $(document).ready(function() {
                 var mainHeader = $('body>header');
                 if (direction == "up") mainHeader.slideDown();
                 if (direction == "down") mainHeader.slideUp();
+
+                var protocolSectionTitle = $('body>.protocol-title');
+                if (direction == "down") {
+                    if (index == 2) protocolSectionTitle.hide();
+                    if (index == 3) protocolSectionTitle.show();
+                }
             }
         });
     }

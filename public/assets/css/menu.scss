@@ -9,7 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0s 0.5s;
-  z-index: 1;
+  z-index: 3;
 
   @media screen and (max-width: 34em) {
     font-size: 90%;
