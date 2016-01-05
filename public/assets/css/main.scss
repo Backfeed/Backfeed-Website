@@ -4,6 +4,7 @@
 @import "menu";
 @import "homepage-protocol";
 @import "homepage-partners";
+@import "explore-in-depth";
 
 #fullpage>section {
   @include make-container();
@@ -89,6 +90,12 @@
   }
 }
 
+h1 {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
 .btn-primary {
   padding: 6px 14px;
 }
@@ -135,3 +142,4 @@ button.next-section {
 #mc_embed_signup{
   background-color: transparent;
 }
+

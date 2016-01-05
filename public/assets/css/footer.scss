@@ -1,5 +1,17 @@
+body>.container-fluid>footer,
+.fp-section#footer>.fp-tableCell>footer {
+  @include make-row();
+  justify-content: center;
+}
+
+//Homepage
 #footer {
   background-color: #252525;
+}
+
+//Other Pages
+body>.container-fluid>footer {
+  background-color: #1e1e1e;
 }
 
 .footer-logo {

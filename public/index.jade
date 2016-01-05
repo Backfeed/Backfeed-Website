@@ -1,7 +1,7 @@
 doctype html
 head
     != partial("_partials/head")
-body(class="#{current.path} #{page_title}")
+body(class="#{current.path} #{current.source}")
     != partial("_partials/header")
     h2.protocol-title
         small The Infrastructure for
@@ -72,7 +72,7 @@ body(class="#{current.path} #{page_title}")
             ul.list-unstyled.partners
                 for partner in public.assets.images.partners._contents
                     .partner
-                        img(src="assets/images/partners/#{ partner }")
+                        img(src="/assets/images/partners/#{ partner }")
         section#footer
             != partial("_partials/footer")
     != partial("_partials/scripts")

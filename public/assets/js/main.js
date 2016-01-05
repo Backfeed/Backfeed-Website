@@ -33,8 +33,8 @@ $(document).ready(function() {
             "navigation": true,
             onLeave: function(index, nextIndex, direction) {
                 var mainHeader = $('body>header');
-                if (direction == "up") mainHeader.slideDown();
-                if (direction == "down") mainHeader.slideUp();
+                if (direction == "up") mainHeader.css('transform', 'translateY(0%)');
+                if (direction == "down") mainHeader.css('transform', 'translateY(-100%)');
 
                 if (direction == "down") {
                     mediaCheck({
@@ -53,10 +53,7 @@ $(document).ready(function() {
     function mobilizeFooter() {
         $.fn.fullpage.destroy('all');
 
-        var partnersSection = $('#partners');
-        var footerSection = $('#footer');
-
-        partnersSection.prependTo(footerSection);
+        $('#partners').prependTo('#footer');
 
         initFullPage(fullPageContainer);
     }

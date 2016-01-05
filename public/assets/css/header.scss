@@ -1,15 +1,21 @@
-body>header {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  position: fixed;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  z-index: 2;
-  color: white;
-  min-height: 55px;
-  background-color: $brand-primary;
-  border-bottom: 1px solid #303030;
-  opacity: 0.96;
+body {
+  &.index>header {
+    position: fixed;
+  }
+
+  &>header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 2;
+    color: white;
+    min-height: 55px;
+    background-color: $brand-primary;
+    border-bottom: 1px solid #303030;
+    opacity: 0.96;
+    transition: transform 200ms linear 0s;
+  }
 }
