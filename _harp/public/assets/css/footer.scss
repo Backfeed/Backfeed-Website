@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body>.container-fluid>footer,
-.fp-section#footer>.fp-tableCell>footer {
+#footer>.fp-tableCell>footer {
   @include make-row();
   justify-content: center;
 }

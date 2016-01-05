@@ -73,6 +73,8 @@ $(document).ready(function() {
         protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
+        document.querySelector('body>.protocol-title').remove();
+
         initFullPage(fullPageContainer);
     }
 

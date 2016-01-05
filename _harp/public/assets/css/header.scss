@@ -15,14 +15,17 @@ body {
     z-index: 2;
     color: white;
     min-height: 55px;
-    background-color: $brand-primary;
-    border-bottom: 1px solid #303030;
+    background-color: transparent;
     opacity: 0.96;
-    transition: transform 200ms linear 0s;
+    transition: transform 200ms linear 0s, background-color 0.5s linear;
   }
 }
 
 .header-logo {
   display: flex;
   align-items: center;
+}
+
+body:not(.fp-viewing-0)>header {
+  background-color: $brand-primary;
 }

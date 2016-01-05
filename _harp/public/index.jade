@@ -12,7 +12,7 @@ body(class="#{current.path} #{current.source}")
             video#bgvid(autoplay, loop, poster="/assets/images/intro-bg.png")
                 source(src="/assets/intro-video.webm", type="video/webm")
                 source(src="/assets/intro-video.mp4", type="video/mp4")
-            .layer-above-video
+            .intro-content
                 p.tagline.text-xs-center
                     span(style={"font-size": "42px"}) A Social Operating System
                     br
@@ -76,11 +76,12 @@ body(class="#{current.path} #{current.source}")
                     .text-xs-center.text-md-left
                         a.btn.btn-primary.btn-in-section(href="/explore-in-depth") Explore in Depth
         section#partners
-            h2 Partners
-            ul.list-unstyled.partners
-                for partner in public.assets.images.partners._contents
-                    .partner
-                        img(src="/assets/images/partners/#{ partner }")
+            .row
+                h2 Partners
+                ul.list-unstyled.partners
+                    for partner in public.assets.images.partners._contents
+                        .partner
+                            img(src="/assets/images/partners/#{ partner }")
         section#footer
             != partial("_partials/footer")
     != partial("_partials/scripts")
