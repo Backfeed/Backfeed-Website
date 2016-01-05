@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 body {
   &.index>header {
     position: fixed;
@@ -18,4 +20,9 @@ body {
     opacity: 0.96;
     transition: transform 200ms linear 0s;
   }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
 }
