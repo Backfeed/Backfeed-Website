@@ -1,0 +1,42 @@
+meta(charset="utf-8")
+title= title
+link(rel="canonical", href="http://backfeed.cc")
+link(rel='icon', type='image/png', href='/assets/images/logo/favicon-32x32.png', sizes='32x32')
+link(rel='icon', type='image/png', href='/assets/images/logo/favicon-32x32/image.png', sizes='192x192')
+
+meta(property="og:locale", content="en_US")
+meta(property="og:type", content="website")
+meta(property="og:title", content=title)
+meta(property="og:description", content=description)
+meta(property="og:url", content="http://backfeed.cc/")
+meta(property="og:site_name", content="Backfeed")
+meta(property="og:image", content="/assets/images/logo/logo-big.png")
+
+meta(name="twitter:card", content="summary")
+meta(name="twitter:title", content=title)
+meta(name="twitter:description", content=description)
+meta(name="twitter:domain", content="Backfeed")
+meta(name="twitter:image", content="/assets/images/logo/logo-big.png")
+
+script.
+    (function(d) {
+        var config = {
+                    kitId: 'crn4ezy',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h=d.documentElement, t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+
+link(rel="stylesheet", href="//cdn-images.mailchimp.com/embedcode/slim-081711.css")
+style.
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+
+link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+link(rel='stylesheet', href='lib/fullpage.js/dist/jquery.fullpage.css')
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+link(rel='stylesheet', href='/assets/css/main.css')
+
+- console.log('\n' + new Date().toLocaleTimeString() + '\n'); console.log(JSON.stringify(public, null, '\t'));

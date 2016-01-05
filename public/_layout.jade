@@ -1,0 +1,9 @@
+doctype html
+head
+    != partial("_partials/head")
+body(class="#{current.path} #{current.source}")
+    != partial("_partials/header")
+    != yield
+    .container-fluid
+        != partial("_partials/footer")
+    != partial("_partials/scripts")

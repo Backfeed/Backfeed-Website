@@ -1,0 +1,107 @@
+@import "bootstrap";
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(30,30,30,0.96);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  z-index: 3;
+  font-family: $headings-font-family;
+
+  @media screen and (max-width: 34em) {
+    font-size: 90%;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+
+    nav ul {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+
+  &.close nav ul {
+    transform: translateY(25%) rotateX(-35deg);
+  }
+
+  .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    color: white;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 36px;
+
+    @media screen and (max-width: 34em) {
+      transform: scale(0.5);
+    }
+  }
+
+  /* Menu style */
+  nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    font-size: 4rem;
+    transform: translateY(-50%);
+    perspective: 1200px;
+
+    @media screen and (max-height: 30.5em) {
+      height: 70%;
+      font-size: 34px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    opacity: 0.4;
+    transform: translateY(-25%) rotateX(35deg);
+    transition: transform 0.5s, opacity 0.5s;
+
+    li {
+      display: block;
+      margin-bottom: 3rem;
+      min-height: 54px;
+
+      @media screen and (max-height: 30.5em) {
+        min-height: 34px;
+      }
+
+      a {
+        font-weight: 300;
+        display: block;
+        color: #fff;
+        transition: color 0.2s;
+        text-decoration: none;
+        outline: none;
+        line-height: 1.1;
+
+        &:hover,
+        &:focus {
+          color: #e3fcb1;
+        }
+      }
+    }
+  }
+}
