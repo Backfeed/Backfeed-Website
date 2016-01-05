@@ -1,0 +1,137 @@
+@import "bootstrap";
+
+#protocol {
+  .protocol-title {
+    display: block;
+  }
+
+  .protocol-body:nth-of-type(1) .protocol-feature-image {
+    background-image: url("/assets/images/protocol-feature-1-lg.png");
+  }
+  .protocol-body:nth-of-type(2) .protocol-feature-image {
+    background-image: url("/assets/images/protocol-feature-2-lg.png");
+  }
+  .protocol-body:nth-of-type(3) .protocol-feature-image {
+    background-image: url("/assets/images/protocol-feature-3-lg.png");
+  }
+
+  @include media-breakpoint-down(sm) {
+    background: url("/assets/images/protocol-bg.png") no-repeat center center;
+    background-size: contain;
+    background-origin: content-box;
+
+    .fp-tableCell {
+      vertical-align: top;
+    }
+
+    p {
+      color: #4d4d4d;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background: transparent url("/assets/images/protocol.jpg") repeat scroll 0 0;
+    background-size: cover;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .fp-viewing-2,
+  .fp-viewing-3,
+  .fp-viewing-4,
+  .fp-viewing-5 {
+    .protocol-title {
+      display: block;
+    }
+  }
+}
+
+.protocol-title {
+  display: none;
+  font-size: 3.076923076923077rem;
+  z-index: 1;
+  color: white;
+  padding: 20px 15px;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;
+    position: absolute;
+    font-size: 18px;
+    height: 103.6px;
+    padding-bottom: 44px;
+  }
+
+  small {
+    font-size: 14px;
+  }
+}
+
+.protocol-section {
+  @include make-col();
+
+  @include media-breakpoint-up(md) {
+    @include make-col-span(12);
+    color: #cbcbcb;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 110px;
+  }
+}
+
+.protocol-features {
+  @include make-row();
+}
+
+.protocol-body {
+  @include make-col();
+
+  @include media-breakpoint-up(md) {
+    @include make-col-span(4);
+  }
+
+  p {
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      padding: 0 30px;
+    }
+  }
+}
+
+.protocol-feature {
+  @include make-col();
+
+  @include media-breakpoint-up(xs) {
+    @include make-col-span(12);
+    padding-top: 40px;
+  }
+}
+
+.protocol-feature-title {
+  margin-bottom: 1rem;
+  @include media-breakpoint-up(md) {
+    color: white;
+  }
+}
+
+.protocol-feature-image {
+  width: 100px;
+  height: 100px;
+  background: no-repeat center center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+#protocol-feature-1 .protocol-feature-image {
+  background-image: url("/assets/images/protocol-feature-1.png");
+}
+
+#protocol-feature-2 .protocol-feature-image {
+  background-image: url("/assets/images/protocol-feature-2.png");
+}
+
+#protocol-feature-3 .protocol-feature-image {
+  background-image: url("/assets/images/protocol-feature-3.png");
+}

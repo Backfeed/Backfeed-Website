@@ -1,0 +1,34 @@
+{
+  "name": "mediaCheck",
+  "version": "0.4.6",
+  "authors": [
+    {
+      "name": "Rob Tarr",
+      "email": "rob@robtarr.net",
+      " homepage": "http://robtarr.net"
+    }
+  ],
+  "homepage": "https://github.com/sparkbox/mediaCheck",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparkbox/mediaCheck.git"
+  },
+  "main": "js/mediaCheck.js",
+  "ignore": [
+    "stylesheets",
+    "node_modules",
+    "index.html",
+    "coffee",
+    "Gruntfile.coffee"
+  ],
+  "_release": "0.4.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.6",
+    "commit": "a5e2832c1c0737e8b2bc7dad286798ec90315a0f"
+  },
+  "_source": "git://github.com/sparkbox/mediaCheck.git",
+  "_target": "~0.4.6",
+  "_originalSource": "mediaCheck",
+  "_direct": true
+}

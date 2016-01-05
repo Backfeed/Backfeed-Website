@@ -1,0 +1,83 @@
+@import "bootstrap";
+
+body.explore-in-depth {
+  @include media-breakpoint-up(xs) {
+    h1 {
+      background: url(/assets/images/header-explore-in-depth.jpg) center;
+      background-size: cover;
+    }
+  }
+
+  h2 {
+    @include make-col();
+    @include make-col-offset(2);
+    margin-bottom: 1rem;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #202020;
+
+    @include media-breakpoint-up(sm) {
+      background-color: initial;
+      color: rgb(59, 59, 59);
+      font-size: 28px;
+      margin-left: initial;
+      text-align: center;
+      font-weight: normal;
+      margin-top: 7rem;
+    }
+  }
+
+  h3 {
+    color: #6c6c6c;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+  }
+
+  .depth {
+    @include make-row();
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  .deep-depth {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    p {
+      @include media-breakpoint-up(sm) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  p.lead {
+    @include make-col();
+    @include media-breakpoint-up(sm) {
+      @include make-col-span(6);
+      font-family: $headings-font-family;
+      font-size: 18px;
+      font-weight: normal;
+      text-align: right;
+    }
+
+    font-size: 13px;
+    line-height: 1.88;
+    color: #2c2c2c;
+  }
+
+  .text-content {
+    @include make-col();
+    @include media-breakpoint-up(sm) {
+      @include make-col-span(6);
+      font-size: 16px;
+    }
+  }
+
+  .hr {
+    margin-bottom: 2rem;
+    @include make-col();
+    @include make-col-span(12);
+  }
+}

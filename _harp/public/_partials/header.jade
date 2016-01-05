@@ -1,0 +1,13 @@
+.overlay
+    button.btn.btn-clean.overlay-close
+        i.fa.fa-close
+    nav
+        ul
+            each url, name in public._data.menu
+                li
+                    a(href=url)= name
+header
+    a.header-logo(href="/")
+        img(src="/assets/images/logo/header-logo.png")
+    button#trigger-overlay.btn.btn-clean
+        i.fa.fa-bars.fa-2x
