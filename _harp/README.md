@@ -17,7 +17,7 @@ $ git clone git@github.com:Backfeed/Backfeed-Website.git
 
 3) Start Harp server
 ```
-$ harp server --port 9966
+$ harp server _harp/ --port 9966
 ```
 
 4) Visit [http://localhost:9966/](http://localhost:9966/) in your browser and follow the instructions in the page
@@ -26,14 +26,11 @@ $ harp server --port 9966
 
 ## Publishing & Deploying
 
-To convert this to normalized HTML, JS and CSS, run `harp compile` from the command line and a `www` directory will be created with all your files contained inside it, which you can publish anywhere.
-
-Here are some popular deploying options:
-
-- [Deploying using the Harp Platform](http://harpjs.com/docs/deployment/harp-platform)
-- [Deploying to GitHub Pages](http://harpjs.com/docs/deployment/github-pages)
-- [Deploying to Heroku](http://harpjs.com/docs/deployment/heroku)
+The Backfeed website is deployed to GitHub Pages.
+The only requirement is that the website's files will be stored at the root directory of the repository.
+To convert this to normalized HTML, JS and CSS, run `harp compile _harp/ .` (notice the trailing dot).
+A static website will be created, which you can publish anywhere, even completely independently from Harp.
 
 ## License
 
-MIT
+TBD
