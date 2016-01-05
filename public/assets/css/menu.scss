@@ -5,11 +5,12 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(153,204,51,0.9);
+  background: rgba(30,30,30,0.96);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0s 0.5s;
   z-index: 3;
+  font-family: $headings-font-family;
 
   @media screen and (max-width: 34em) {
     font-size: 90%;
@@ -38,12 +39,11 @@
     top: 20px;
     overflow: hidden;
     border: none;
-    background: url(http://tympanus.net/Development/FullscreenOverlayStyles/img/cross.png) no-repeat center center;
-    text-indent: 200%;
-    color: transparent;
+    color: white;
     outline: none;
     z-index: 100;
     cursor: pointer;
+    font-size: 36px;
 
     @media screen and (max-width: 34em) {
       transform: scale(0.5);
@@ -56,7 +56,7 @@
     position: relative;
     top: 50%;
     height: 60%;
-    font-size: 54px;
+    font-size: 4rem;
     transform: translateY(-50%);
     perspective: 1200px;
 
@@ -79,7 +79,7 @@
 
     li {
       display: block;
-      height: calc(100% / 5);
+      margin-bottom: 3rem;
       min-height: 54px;
 
       @media screen and (max-height: 30.5em) {
@@ -93,6 +93,7 @@
         transition: color 0.2s;
         text-decoration: none;
         outline: none;
+        line-height: 1.1;
 
         &:hover,
         &:focus {

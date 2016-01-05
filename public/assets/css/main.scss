@@ -1,6 +1,9 @@
 @import "bootstrap";
 @import "header";
+@import "footer";
 @import "menu";
+@import "homepage-protocol";
+@import "homepage-partners";
 
 #fullpage>section {
   @include make-container();
@@ -29,44 +32,22 @@
   }
 }
 
-#protocol {
-  .protocol-title {
-    display: block;
-  }
-
-  .fp-tableCell {
-    vertical-align: top;
-  }
-
-  @include media-breakpoint-down(sm) {
-    background: url("/assets/images/protocol-bg.png") no-repeat center center;
+#applications {
+  @include media-breakpoint-down(xs) {
+    background: url("/assets/images/applications-bg.png") no-repeat center center;
     background-size: contain;
     background-origin: content-box;
 
-    p {
-      color: #4d4d4d;
+    @include media-breakpoint-down(md) {
+      background-color: $gray;
+      color: white;
     }
   }
 
-  @include media-breakpoint-up(md) {
-    background: transparent url("/assets/images/protocol.jpg") repeat scroll 0 0;
-    background-size: cover;
-  }
-}
-
-/*#protocol,
-#protocol-feature-1,
-#protocol-feature-2,
-#protocol-feature-3 {
-  @include media-breakpoint-down(sm) {
-    padding-top: 110px;
-  }
-}*/
-
-#applications {
-  @include media-breakpoint-down(md) {
-    background-color: $gray;
-    color: white;
+  .text-content h2 {
+    @include media-breakpoint-down(xs) {
+      color: white;
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -74,32 +55,6 @@
 
     p {
       color: $body-color;
-    }
-  }
-}
-
-.protocol-body {
-  @include make-col();
-  @include media-breakpoint-up(xs) {
-    @include make-col-span(12);
-    padding-top: 110px;
-  }
-}
-
-.protocol-features {
-  @include make-row();
-}
-
-.protocol-feature {
-  @include make-col();
-  @include media-breakpoint-up(md) {
-    @include make-col-span(4);
-  }
-
-  p {
-    @include media-breakpoint-up(lg) {
-      text-align: left;
-      padding: 0 30px;
     }
   }
 }
@@ -129,14 +84,17 @@
       @include make-col-span(6);
     }
     @include media-breakpoint-down(xs) {
-      flex-basis: 90%;
+      @include make-col-span(12);
     }
   }
 }
 
 .btn-primary {
-  border-radius: 15px;
   padding: 6px 14px;
+}
+
+.btn-in-section {
+  border-radius: 15px;
   margin-top: 1rem;
 }
 
@@ -154,32 +112,6 @@ small.tagline {
   font-size: 1.230769230769231rem;
 }
 
-@include media-breakpoint-down(md) {
-  .fp-viewing-2,
-  .fp-viewing-3,
-  .fp-viewing-4,
-  .fp-viewing-5 {
-    .protocol-title {
-      display: block;
-    }
-  }
-}
-
-.protocol-title {
-  display: none;
-  font-size: 18px;
-  z-index: 1;
-  background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;
-  color: white;
-  padding: 20px 15px 44px;
-  position: absolute;
-  width: 100%;
-
-  small {
-    font-size: 14px;
-  }
-}
-
 #fp-nav {
   @include media-breakpoint-down(md) {
     display: none;
@@ -187,4 +119,19 @@ small.tagline {
   .right {
     right: 10px;
   }
+}
+
+.form-group.less-width {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+button.next-section {
+  position: absolute;
+  left: calc(50% - 16.7167px);
+  bottom: 10%;
+}
+
+#mc_embed_signup{
+  background-color: transparent;
 }

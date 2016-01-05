@@ -11,7 +11,7 @@ body(class="#{current.path} #{page_title}")
         section#intro
             p.tagline A Social Operating System for Decentralized Organizations
             small.tagline Enabling massive open source collaboration without central coordination
-            button.js-next-section.center-block.btn.btn-clean
+            button.next-section.center-block.btn.btn-clean
                 i.fa.fa-angle-double-down.fa-2x
         section#imagine
             .row-with-illustration
@@ -23,39 +23,40 @@ body(class="#{current.path} #{page_title}")
                     p Imagine the innovative potential of such organisations decoupled from the rigidities of hierarchical structures. For all this and more…
                     p Backfeed provides the infrastructure for decentralized cooperation
                     .text-xs-center.text-md-left
-                        a.btn.btn-primary(href="/explore-in-depth") Learn More
+                        a.btn.btn-primary.btn-in-section(href="/explore-in-depth") Learn More
         section#protocol
             .row
-                h2.protocol-title
+                h2.protocol-title.text-md-center
                     small The Infrastructure for
                     br
                     | Decentralized Cooperation
-                .protocol-body
-                    p Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
-                    p.hidden-md-up.lead(style={"margin-top": "3rem"}) The Backfeed protocol provides....
+                .protocol-section
+                    p.text-md-center Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
+                    p.hidden-md-up.lead.m-t-3 The Backfeed protocol provides....
                     .protocol-features
-                    a.btn.btn-primary.hidden-md-down(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-1
+                    .hidden-sm-down.text-sm-center
+                        a.btn.btn-primary.btn-in-section(href="/explore-in-depth") Explore in Depth
+        section#protocol-feature-1.protocol-feature
             .row
-                .protocol-feature.text-xs-center
-                    img(class="img-circle", src="/assets/images/protocol-feature-1.png")
-                    h3 Dynamic Power Distribution
+                .protocol-body.text-xs-center
+                    .protocol-feature-image
+                    h3.protocol-feature-title.m-b-1 Dynamic Power Distribution
                     p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
-                    a.btn.btn-primary(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-2
+                    a.btn.btn-primary.btn-in-section.hidden-md-up(href="/explore-in-depth") Explore in Depth
+        section#protocol-feature-2.protocol-feature
             .row
-                .protocol-feature.text-xs-center
-                    img(class="img-circle", src="/assets/images/protocol-feature-2.png")
-                    h3 Proof of Value (PoV)
+                .protocol-body.text-xs-center
+                    .protocol-feature-image
+                    h3.protocol-feature-title.m-b-1 Proof of Value (PoV)
                     p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
-                    a.btn.btn-primary(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-3
+                    a.btn.btn-primary.btn-in-section.hidden-md-up(href="/explore-in-depth") Explore in Depth
+        section#protocol-feature-3.protocol-feature
             .row
-                .protocol-feature.text-xs-center
-                    img(class="img-circle", src="/assets/images/protocol-feature-3.png")
-                    h3 Dynamic Power Distribution
+                .protocol-body.text-xs-center
+                    .protocol-feature-image
+                    h3.protocol-feature-title.m-b-1 Accommodating Diversity
                     p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
-                    a.btn.btn-primary(href="/explore-in-depth") Explore in Depth
+                    a.btn.btn-primary.btn-in-section.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#applications
             .row-with-illustration
                 .illustration.hidden-xs-down
@@ -65,13 +66,14 @@ body(class="#{current.path} #{page_title}")
                     p Backfeed’s infrastructure comprises decentralized management tools, equity-sharing schemes, crowdsourcing mechanisms, and instruments for the collaborative evaluation and curation of content. The Backfeed protocol can fuel a variety of applications, including decentralized journalism, decentralized insurance, decentrarized ride-sharing applications,t and any other enterprise that would benefit from  the decentralized, indirect coordination of large groups of individuals.
                     p With Backfeed, it will soon be possible to bootstrap decentralized organisations on top of the blockchain as easy as one would deploy a website today.
                     .text-xs-center.text-md-left
-                        a.btn.btn-primary(href="/explore-in-depth") Learn More
-        section
+                        a.btn.btn-primary.btn-in-section(href="/explore-in-depth") Explore in Depth
+        section#partners
             h2 Partners
-            .row(style={"justify-content": "center"})
+            ul.list-unstyled.partners
                 for partner in public.assets.images.partners._contents
-                    img(src="assets/images/partners/#{ partner }")
-        section
+                    .partner
+                        img(src="assets/images/partners/#{ partner }")
+        section#footer
             != partial("_partials/footer")
     != partial("_partials/scripts")
 

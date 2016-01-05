@@ -1,0 +1,37 @@
+#footer {
+  background-color: #252525;
+}
+
+.footer-logo {
+  @include center-block();
+  margin: 2rem auto 3rem;
+}
+
+.footer-title {
+  color: #767676;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.community {
+  @include make-row();
+  justify-content: space-around;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+
+  li {
+    @include make-col();
+    @include make-col-span(6);
+
+    a {
+      color: #b5b5b5;
+    }
+  }
+}
+
+#mc_embed_signup input.email {
+  margin-left: auto;
+  margin-right: auto;
+}

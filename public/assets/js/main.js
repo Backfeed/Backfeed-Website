@@ -1,18 +1,65 @@
 $(document).ready(function() {
 
     var fullPageContainer = $('#fullpage');
-    if (fullPageContainer) initFullPage(fullPageContainer);
+    if (fullPageContainer) {
+        initFullPage(fullPageContainer);
 
-    mediaCheck({
-        media: '(min-width: 768px)',
-        entry: mobilizeProtocolSection,
-        exit: function() {
-            console.log('leaving 420');
-        },
-        both: function() {
-            console.log('changing state');
-        }
-    });
+        mediaCheck({
+            media: '(min-width: 768px)',
+            entry: mobilizeProtocolSection,
+            exit: function() {
+                console.log('leaving 420');
+            },
+            both: function() {
+                console.log('changing state');
+            }
+        });
+
+        mediaCheck({
+            media: '(min-width: 992px)',
+            entry: mobilizeFooter,
+            exit: function() {
+                console.log('leaving 420');
+            },
+            both: function() {
+                console.log('changing state');
+            }
+        });
+    }
+
+    function initFullPage() {
+        fullPageContainer.fullpage({
+            "sectionSelector": "main>section",
+            "navigation": true,
+            onLeave: function(index, nextIndex, direction) {
+                var mainHeader = $('body>header');
+                if (direction == "up") mainHeader.slideDown();
+                if (direction == "down") mainHeader.slideUp();
+
+                if (direction == "down") {
+                    mediaCheck({
+                        media: '(max-width: 768px)',
+                        entry: function () {
+                            var protocolSectionTitle = $('body>.protocol-title');
+                            if (index == 2) protocolSectionTitle.css('opacity', '0');
+                            if (index == 3) protocolSectionTitle.css('opacity', '1');
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    function mobilizeFooter() {
+        $.fn.fullpage.destroy('all');
+
+        var partnersSection = $('#partners');
+        var footerSection = $('#footer');
+
+        partnersSection.prependTo(footerSection);
+
+        initFullPage(fullPageContainer);
+    }
 
     function mobilizeProtocolSection() {
         $.fn.fullpage.destroy('all');
@@ -20,34 +67,16 @@ $(document).ready(function() {
         var protocolSection = $('#protocol');
         var protocolSectionRow = protocolSection.find('.protocol-features');
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
         initFullPage(fullPageContainer);
-    }
-
-    function initFullPage() {
-        fullPageContainer.fullpage({
-            "sectionSelector": "section",
-            "navigation": true,
-            onLeave: function(index, nextIndex, direction) {
-                var mainHeader = $('body>header');
-                if (direction == "up") mainHeader.slideDown();
-                if (direction == "down") mainHeader.slideUp();
-
-                var protocolSectionTitle = $('body>.protocol-title');
-                if (direction == "down") {
-                    if (index == 2) protocolSectionTitle.hide();
-                    if (index == 3) protocolSectionTitle.show();
-                }
-            }
-        });
     }
 
     var triggerBttn = document.getElementById('trigger-overlay'),
@@ -73,4 +102,8 @@ $(document).ready(function() {
             }
         }
     }
+
+    $('.next-section').on('click', function() {
+        $.fn.fullpage.moveSectionDown();
+    });
 });
