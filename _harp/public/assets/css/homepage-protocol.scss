@@ -1,18 +1,6 @@
-@import "bootstrap";
-
 #protocol {
   .protocol-title {
     display: block;
-  }
-
-  .protocol-body:nth-of-type(1) .protocol-feature-image {
-    background-image: url("/assets/images/protocol-feature-1-lg.png");
-  }
-  .protocol-body:nth-of-type(2) .protocol-feature-image {
-    background-image: url("/assets/images/protocol-feature-2-lg.png");
-  }
-  .protocol-body:nth-of-type(3) .protocol-feature-image {
-    background-image: url("/assets/images/protocol-feature-3-lg.png");
   }
 
   @include media-breakpoint-down(sm) {
@@ -115,23 +103,7 @@
   }
 }
 
-.protocol-feature-image {
-  width: 100px;
-  height: 100px;
-  background: no-repeat center center;
-  margin-left: auto;
-  margin-right: auto;
+.protocol-icon {
+  font-size: 100px;
   margin-bottom: 1rem;
-}
-
-#protocol-feature-1 .protocol-feature-image {
-  background-image: url("/assets/images/protocol-feature-1.png");
-}
-
-#protocol-feature-2 .protocol-feature-image {
-  background-image: url("/assets/images/protocol-feature-2.png");
-}
-
-#protocol-feature-3 .protocol-feature-image {
-  background-image: url("/assets/images/protocol-feature-3.png");
 }

@@ -1,14 +1,17 @@
-@import "bootstrap";
-
 body>.container-fluid>footer,
-#footer>.fp-tableCell>footer {
+#footer footer {
   @include make-row();
   justify-content: center;
+  align-items: flex-start;
 }
 
 //Homepage
 #footer {
   background-color: #252525;
+
+  .fp-tableCell {
+    flex-direction: column;
+  }
 }
 
 //Other Pages
@@ -16,36 +19,91 @@ body>.container-fluid>footer {
   background-color: #1e1e1e;
 }
 
+.footer-container {
+  @include make-container();
+  @include make-container-max-widths();
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .footer-logo {
   @include center-block();
-  margin: 2rem auto 3rem;
+  margin: 0 auto 28px;
 }
 
 .footer-title {
-  color: #767676;
+  color: #cfcfcf;
   text-align: center;
   margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .community {
-  @include make-row();
-  justify-content: space-around;
-  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 230px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 50px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-left: 80px;
+  }
 
   li {
-    @include make-col();
-    @include make-col-span(6);
+    flex-basis: 50%;
+    margin-bottom: 0.5rem;
 
     a {
       color: #b5b5b5;
+
+      .fa-stack {
+        margin-right: 0.5rem;
+      }
     }
+  }
+
+  .fa-stack-1x {
+    color: #252525;
+  }
+
+  .fa-stack-2x {
+    color: #b4b4b4;
   }
 }
 
-#mc_embed_signup input.email {
+.blog-posts {
+  .media {
+    margin-bottom: 4rem;
+  }
+
+  .media-body {
+    color: #c8c8c8;
+    font-size: 13px;
+  }
+
+  .media-heading {
+    margin-bottom: 1rem;
+    color: #c8c8c8;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  time {
+    color: #f90b6d;
+    font-size: 11px;
+  }
+}
+
+.subscribe-form input[type="email"] {
   margin-left: auto;
   margin-right: auto;
+  width: 80%;
+  font-size: 15px;
 }

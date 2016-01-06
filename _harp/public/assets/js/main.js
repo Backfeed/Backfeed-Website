@@ -16,7 +16,7 @@ $(document).ready(function() {
         });
 
         mediaCheck({
-            media: '(min-width: 992px)',
+            media: '(min-width: 768px)',
             entry: mobilizeFooter,
             exit: function() {
                 console.log('leaving 420');

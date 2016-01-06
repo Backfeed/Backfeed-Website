@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-icons";
 @import "header";
 @import "footer";
 @import "menu";
@@ -6,9 +7,10 @@
 @import "homepage-partners";
 @import "explore-in-depth";
 
-#fullpage>section {
+/*#fullpage>section {
   @include make-container();
-}
+  @include make-container-max-widths();
+}*/
 
 .fp-tableCell {
   display: flex;
@@ -49,17 +51,10 @@
 #imagine {
   @include media-breakpoint-down(xs) {
     background: url("/assets/images/imagine-bg.png") no-repeat center center;
-    background-size: contain;
-    background-origin: content-box;
+    background-size: 90%;
 
     p {
       color: #4d4d4d;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    .illustration {
-      order: 1;
     }
   }
 }
@@ -67,8 +62,7 @@
 #applications {
   @include media-breakpoint-down(xs) {
     background: url("/assets/images/applications-bg.png") no-repeat center center;
-    background-size: contain;
-    background-origin: content-box;
+    background-size: 90%;
 
     @include media-breakpoint-down(md) {
       background-color: $gray;
@@ -186,7 +180,7 @@ small.tagline {
 }
 
 .intro-content {
-  width: 80%;
+  position: relative;
   z-index: 4;
 }
 

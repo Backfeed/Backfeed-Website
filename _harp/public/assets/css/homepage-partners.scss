@@ -1,9 +1,7 @@
-@import "bootstrap";
-
 #partners {
   background-color: $gray-lighter;
-  margin-left:  15px;
-  margin-right: 15px;
+  //
+  width: 100%;
 
   h2 {
     color: white;
@@ -13,7 +11,7 @@
 }
 
 .partners {
-  @include make-row();
+  display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 2rem;
@@ -21,7 +19,7 @@
 
 .partner {
   background-color: $gray-light;
-  width: 130%;
+  width: 700%;
   text-align: center;
   transform: rotate(17deg);
   margin-bottom: 1rem;
@@ -31,7 +29,7 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   #partners {
     background-color: inherit;
   }
@@ -41,6 +39,8 @@
     justify-content: center;
     background-color: $gray-lighter;
     padding-top: 0;
+    //
+    width: 100%;
   }
 
   .partner {
