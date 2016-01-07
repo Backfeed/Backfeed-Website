@@ -95,10 +95,13 @@ body>.container-fluid>footer {
 
   .media-heading {
     margin-bottom: 1rem;
-    color: #c8c8c8;
     font-family: $font-family-sans-serif;
     font-weight: bold;
     font-size: 15px;
+
+    a {
+      color: #c8c8c8;
+    }
   }
   
   time {
