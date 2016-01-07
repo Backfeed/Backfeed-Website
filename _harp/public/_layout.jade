@@ -4,6 +4,7 @@ head
 body(class="#{current.path} #{current.source}")
     != partial("_partials/header")
     != yield
-    .container-fluid
-        != partial("_partials/footer")
+    #footer.p-t-3
+        .footer-container
+            != partial("_partials/footer")
     != partial("_partials/scripts")

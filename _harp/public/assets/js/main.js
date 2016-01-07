@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         mediaCheck({
             media: '(min-width: 768px)',
-            entry: mobilizeProtocolSection,
+            entry: desktopizeProtocolSection,
             exit: function() {
                 console.log('leaving 420');
             },
@@ -16,8 +16,8 @@ $(document).ready(function() {
         });
 
         mediaCheck({
-            media: '(min-width: 992px)',
-            entry: mobilizeFooter,
+            media: '(min-width: 768px)',
+            entry: desktopizeFooter,
             exit: function() {
                 console.log('leaving 420');
             },
@@ -50,7 +50,7 @@ $(document).ready(function() {
         });
     }
 
-    function mobilizeFooter() {
+    function desktopizeFooter() {
         $.fn.fullpage.destroy('all');
 
         $('#partners').prependTo('#footer');
@@ -58,7 +58,7 @@ $(document).ready(function() {
         initFullPage(fullPageContainer);
     }
 
-    function mobilizeProtocolSection() {
+    function desktopizeProtocolSection() {
         $.fn.fullpage.destroy('all');
 
         var protocolSection = $('#protocol');
@@ -72,6 +72,11 @@ $(document).ready(function() {
 
         protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
         protocolSection.next().remove();
+
+        var stickyProtocolTitle = $('body>.protocol-title');
+        if (stickyProtocolTitle) stickyProtocolTitle.remove();
+
+        protocolSection.find('.protocol-title').prependTo(protocolSection.find('.protocol-section'));
 
         initFullPage(fullPageContainer);
     }

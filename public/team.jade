@@ -1,9 +1,0 @@
-.container
-    h1 Team
-    .team-members
-        each member in public._data.team.members
-            != partial("_partials/team-member", { member: member })
-    h2 Advisers
-    .team-members
-        each member in public._data.team.advisers
-            != partial("_partials/team-member", { member: member })

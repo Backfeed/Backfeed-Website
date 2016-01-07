@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-icons";
 @import "header";
 @import "footer";
 @import "menu";
@@ -6,49 +7,58 @@
 @import "homepage-partners";
 @import "explore-in-depth";
 
-#fullpage>section {
-  @include make-container();
+.fp-tableCell {
+  display: flex;
+  align-items: center;
 }
+
+#fp-nav {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  .right {
+    right: 10px;
+  }
+}
+
 
 #intro {
   background: url("/assets/images/intro-bg.png");
   color: white;
+
+  .fp-tableCell {
+    justify-content: center;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4B4B4B;
+    top: 0;
+    z-index: 3;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
 }
 
 #imagine {
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     background: url("/assets/images/imagine-bg.png") no-repeat center center;
-    background-size: contain;
-    background-origin: content-box;
+    background-size: 90%;
 
     p {
       color: #4d4d4d;
     }
   }
-
-  @include media-breakpoint-up(md) {
-    .illustration {
-      order: 1;
-    }
-  }
 }
 
 #applications {
-  @include media-breakpoint-down(xs) {
-    background: url("/assets/images/applications-bg.png") no-repeat center center;
-    background-size: contain;
-    background-origin: content-box;
-
-    @include media-breakpoint-down(md) {
-      background-color: $gray;
-      color: white;
-    }
-  }
-
-  .text-content h2 {
-    @include media-breakpoint-down(xs) {
-      color: white;
-    }
+  @include media-breakpoint-down(sm) {
+    background: url("/assets/images/applications-bg.png") no-repeat center center $gray;
+    background-size: 90%;
+    color: white;
   }
 
   @include media-breakpoint-up(md) {
@@ -58,19 +68,41 @@
       color: $body-color;
     }
   }
+
+  .text-content h2 {
+    @include media-breakpoint-down(sm) {
+      color: #e9e9e9;
+    }
+  }
 }
 
 .team-members {
   @include make-row();
+  justify-content: center;
   text-align: center;
 }
 
 .team-member {
-  @include media-breakpoint-up(xs) {
-    @include make-col(3);
+  h2 {
+    font-size: 13px;
+    color: #091f24;
+    margin-bottom: 11px;
   }
-  @include media-breakpoint-up(md) {
-    @include make-col(6);
+
+  p {
+    font-size: 12px;
+    color: #797979;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    & > a:not(:last-of-type) {
+      margin-right: 5px;
+    }
+
+    .fa-stack-2x {
+      color: #2c2c2c;
+    }
   }
 }
 
@@ -78,28 +110,52 @@
   @include make-row();
   justify-content: center;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
 
   .illustration {
     @include make-col();
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col-span(6);
     }
 
     img {
       @include img-fluid();
-      @include center-block();
+      display: block;
+      margin-left: auto;
+      margin-right: 50px;
     }
   }
 
   .text-content {
     @include make-col();
+    @include make-col-span(12);
+
     @include media-breakpoint-up(md) {
-      @include make-col-span(6);
+      @include make-col-span(10);
+      @include make-col-offset(1);
+      margin-top: 5%;
     }
-    @include media-breakpoint-down(xs) {
-      @include make-col-span(12);
+
+    @include media-breakpoint-up(lg) {
+      @include make-col-span(6);
+      @include make-col-offset(0);
+    }
+
+    h2 {
+      margin-bottom: 28px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 40px;
+        font-weight: 500;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.692;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -127,18 +183,44 @@ h1 {
 .tagline {
   font-size: 31px;
   font-family: $headings-font-family;
-}
+  line-height: 1.296;
+  margin-bottom: 45px;
 
-small.tagline {
-  font-size: 16px;
-}
-
-#fp-nav {
-  @include media-breakpoint-down(md) {
-    display: none;
+  @include media-breakpoint-up(md) {
+    font-size: 39px;
+    margin-bottom: 35px;
   }
-  .right {
-    right: 10px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 36px;
+  }
+}
+
+.tagline-bigger {
+  font-size: 31px;
+  font-family: $headings-font-family;
+
+  @include media-breakpoint-up(md) {
+    font-size: 42px;
+  }
+}
+
+.tagline-middle {
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.tagline-smaller {
+  font-size: 16px;
+  font-family: $font-family-sans-serif;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
   }
 }
 
@@ -163,17 +245,15 @@ small.tagline {
   width: 100%;
 }
 
-.layer-above-video {
-  width: 80%;
-  position: absolute;
+.intro-content {
+  position: relative;
   z-index: 4;
-  transform: translateX(10%) translateY(0%);
-  top: 30vh;
 }
 
 button.next-section {
   position: absolute;
-  left: calc(50% - 16.7167px);
+  left: calc(50% - 9.3594px);
   bottom: 4rem;
-  z-index: 3;
+  z-index: 4;
+  color: #adadad;
 }
