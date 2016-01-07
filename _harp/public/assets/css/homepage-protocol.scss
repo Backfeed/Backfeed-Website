@@ -5,15 +5,16 @@
 
   @include media-breakpoint-down(sm) {
     background: url("/assets/images/protocol-bg.png") no-repeat center center;
-    background-size: contain;
-    background-origin: content-box;
-
-    .fp-tableCell {
-      align-items: flex-start;
-    }
+    background-size: 90%;
 
     p {
       color: #4d4d4d;
+
+      &.lead {
+        color: #363636;
+        font-size: 14px;
+        font-weight: 600;
+      }
     }
   }
 
@@ -41,6 +42,7 @@
   color: white;
   padding: 20px 15px;
   width: 100%;
+  font-weight: 500;
 
   @include media-breakpoint-down(sm) {
     background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;
@@ -50,8 +52,16 @@
     padding-bottom: 44px;
   }
 
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+
   small {
     font-size: 14px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -63,13 +73,16 @@
     color: #cbcbcb;
   }
 
-  @include media-breakpoint-down(sm) {
-    padding-top: 110px;
+  &>p {
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
   }
 }
 
 .protocol-features {
   @include make-row();
+  margin-top: 5rem;
 }
 
 .protocol-body {
@@ -103,7 +116,24 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+
+  #protocol-feature-1 .protocol-feature-title::before {
+    content: '1. ';
+  }
+
+  #protocol-feature-2 .protocol-feature-title::before {
+    content: '2. ';
+  }
+
+  #protocol-feature-3 .protocol-feature-title::before {
+    content: '3. ';
+  }
+
+}
+
 .protocol-icon {
-  font-size: 100px;
+  font-size: 62px;
   margin-bottom: 1rem;
+  color: #dfdfdf;
 }

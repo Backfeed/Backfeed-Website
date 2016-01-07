@@ -1,13 +1,20 @@
 footer
     .col-md-4
         img.footer-logo(src="/assets/images/logo/footer-logo.png", alt="Backfeed Logo")
-        form.subscribe-form(action="//backfeed.us11.list-manage.com/subscribe/post?u=bd91582a4e889f710affca0e6&amp;id=040512b5ed", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate)
+        form.subscribe-form(
+            action="//backfeed.us11.list-manage.com/subscribe/post?u=bd91582a4e889f710affca0e6&amp;id=040512b5ed",
+            method="post",
+            name="mc-embedded-subscribe-form",
+            target="_blank",
+            novalidate
+        )
             .form-group
                 label.sr-only(for="mce-EMAIL") Subscribe to our mailing list
                 input#mce-EMAIL.form-control.form-control-lg(type="email", value="", name="EMAIL", placeholder="Email", required)
-            input(type="hidden" name="b_bd91582a4e889f710affca0e6_040512b5ed", tabindex="-1", value="")
+            input(type="hidden", name="b_bd91582a4e889f710affca0e6_040512b5ed", tabindex="-1", value="")
             .text-xs-center
                 input.btn.btn-primary(type="submit", value="Subscribe", name="subscribe")
+        hr
         h3.footer-title Community
         ul.community.list-unstyled
             li
@@ -46,7 +53,7 @@ footer
                         i.fa.fa-circle.fa-stack-2x
                         i.fa.fa-github.fa-stack-1x.fa-inverse
                     | LinkedIn
-    .col-md-4.hidden-md-down
+    .col-lg-4.col-md-6.hidden-sm-down
         ul.blog-posts.media-list
             li.media
                 .media-left
@@ -64,7 +71,7 @@ footer
                     h4.media-heading Media heading
                     p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     time(datetime="2015-05-04") Tuesday, 4 may 2015
-    .col-md-4.hidden-lg-down
-        a.twitter-timeline(href="https://twitter.com/Backfeed_cc", data-widget-id="683557020948148224", data-width="300")
+    .col-lg-4.hidden-md-down
+        a.twitter-timeline(href="https://twitter.com/Backfeed_cc", data-widget-id="685110981677170689", data-chrome="transparent noscrollbar noborders")
         script.
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
