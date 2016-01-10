@@ -164,6 +164,10 @@ h1 {
   text-align: center;
   padding-bottom: 4rem;
   padding-top: 4rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
 }
 
 .btn-primary {
