@@ -1,0 +1,56 @@
+@import "variables";
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/mixins";
+
+body.technical-resources {
+  @include media-breakpoint-up(md) {
+    background: url("/assets/images/technical-resources.png") no-repeat 110% -20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-position-x: 105%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-position-x: 102%;
+  }
+
+  h1 {
+    padding-bottom: 33.5px;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      font-weight: normal;
+    }
+  }
+
+  .technical-resources-wrapper {
+    background: url("/assets/images/technical-resources-bg.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .technical-resources-intro {
+    font-size: 15px;
+    width: 65%;
+    margin-bottom: 74px;
+  }
+  
+  .resources {
+    margin-bottom: 0;
+    padding-bottom: 85px;
+    font-size: 16px;
+
+    li:not(:last-of-type) {
+      margin-bottom: 18px;
+    }
+    
+    a {
+      color: #0c0e0f;
+
+      &:hover {
+        text-decoration: none;
+        color: $brand-primary;
+      }
+    }
+  }
+}

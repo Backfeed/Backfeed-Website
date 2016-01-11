@@ -38,8 +38,6 @@ body.index {
 
 //All pages but homepage
 #footer:not(section) {
-  margin-top: 85px;
-
   &>footer {
     background-color: #1e1e1e;
   }

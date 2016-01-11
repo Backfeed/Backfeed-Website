@@ -1,18 +1,23 @@
-.container
-    h1 Technical Resources
-    .card-deck
-        .card.text-xs-center
-            h3.card-header GitHub
-            .card-block
+.technical-resources-wrapper
+    .container
+        h1 Technical Resources
+        p.technical-resources-intro.hidden-sm-down Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas eleifend ex ut bibendum. Morbi ultrices libero ac placerat hendrerit. Cras suscipit lorem ligula, nec facilisis augue feugiat vitae.
+        ul.resources.list-unstyled
+            li
                 a(href="http://github.com/Backfeed", target="_blank")
-                    i.fa.fa-lg.fa-github
-        .card.text-xs-center
-            h3.card-header Technical Summary
-            .card-block
+                    span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-github.fa-stack-1x.fa-inverse
+                    | &nbsp; GitHub
+            li
                 a(href="http://github.com/Backfeed", target="_blank")
-                    i.fa.fa-lg.fa-file-text
-        .card.text-xs-center
-            h3.card-header Economic Model
-            .card-block
+                    span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-file-text.fa-stack-1x.fa-inverse
+                    | &nbsp; Technical Summary
+            li
                 a(href="http://github.com/Backfeed", target="_blank")
-                    i.fa.fa-lg.fa-file-text
+                    span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-file-text.fa-stack-1x.fa-inverse
+                    | &nbsp; Economic Model
