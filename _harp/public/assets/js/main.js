@@ -81,6 +81,30 @@ $(document).ready(function() {
         initFullPage(fullPageContainer);
     }
 
+    var menuTriggerButton = document.getElementById('trigger-menu'),
+        menu = $('.menu');
+
+    if (menuTriggerButton) menuTriggerButton.addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
+        $(this).toggleClass('open');
+
+        if (menu) {
+            if (menu.hasClass('open')) {
+                menu.animate({
+                    width: "0",
+                    height: "0"
+                }).removeClass('open');
+            } else {
+                menu.addClass('open').animate({
+                    width: "320px",
+                    height: "385px"
+                });
+            }
+        }
+    }
+
+/*
     var triggerBttn = document.getElementById('trigger-overlay'),
         overlay = document.querySelector('.overlay'),
         closeBttn = overlay.querySelector('button.overlay-close');
@@ -104,6 +128,7 @@ $(document).ready(function() {
             }
         }
     }
+*/
 
     $('.next-section').on('click', function() {
         $.fn.fullpage.moveSectionDown();

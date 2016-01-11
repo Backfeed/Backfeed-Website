@@ -2,7 +2,102 @@
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
-/* Overlay style */
+#trigger-menu {
+  width: 27px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 18px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 26px;
+    }
+
+    &:nth-child(4) {
+      top: 34px;
+    }
+  }
+
+  &.open {
+    span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    span:nth-child(4) {
+      top: 18px;
+      width: 0;
+      left: 50%;
+    }
+  }
+}
+
+.menu {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  background-color: black;
+
+  nav {
+    margin-top: 55px;
+  }
+
+  li {
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #242424;
+      cursor: pointer;
+      border-left: 5px #b80443 solid;
+
+      a {
+        color: #ccc;
+      }
+    }
+
+    a {
+      display: block;
+      color: #878787;
+      padding: 20px 30px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+/*
+
+!* Overlay style *!
 .overlay {
   position: fixed;
   width: 100%;
@@ -54,7 +149,7 @@
     }
   }
 
-  /* Menu style */
+  !* Menu style *!
   nav {
     text-align: center;
     position: relative;
@@ -106,4 +201,4 @@
       }
     }
   }
-}
+}*/

@@ -68,7 +68,8 @@
   @include media-breakpoint-up(md) {
     background-color: white;
 
-    p {
+    p,
+    .btn-animated .text {
       color: $body-color;
     }
   }
@@ -174,13 +175,56 @@ h1 {
   }
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn-primary {
   padding: 6px 14px;
 }
 
 .btn-in-section {
-  border-radius: 15px;
   margin-top: 1rem;
+}
+
+.btn-rounded {
+  border-radius: 15px;
+}
+
+.btn-animated {
+  &:hover .shape {
+    animation: 0.5s btn-animated linear forwards;
+  }
+
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 296 540;
+    stroke-dashoffset: -394;
+    stroke-width: 8px;
+    stroke: #B80443;
+  }
+
+  .text {
+    color: white;
+    font-family: $headings-font-family;
+    font-size: 18px;
+    letter-spacing: 4px;
+    position: relative;
+    top: -49px;
+  }
+}
+
+@keyframes btn-animated {
+  0% {
+    stroke-dasharray: 296 540;
+    stroke-dashoffset: -394;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
 }
 
 .btn-clean {
@@ -242,6 +286,7 @@ h1 {
 }
 
 #bgvid {
+  visibility: hidden;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -251,6 +296,10 @@ h1 {
   z-index: 3;
   height: 100%;
   width: 100%;
+}
+
+.fp-viewing-0 #bgvid {
+  visibility: visible;
 }
 
 .intro-content {

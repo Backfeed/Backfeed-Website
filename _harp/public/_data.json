@@ -84,6 +84,22 @@
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/pub/naomi-steinitz/18/100/5a3"
         }
+      },
+      {
+        "name": "Julian Feder",
+        "role": "Communicator",
+        "image_file": "team/Julian.png",
+        "social_profiles": {
+          "facebook": "https://www.facebook.com/julian.d.feder"
+        }
+      },
+      {
+        "name": "Elad Shtilerman",
+        "role": "Algorithm Developer",
+        "image_file": "team/Elad.png",
+        "social_profiles": {
+          "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108"
+        }
       }
     ],
     "advisers": [
