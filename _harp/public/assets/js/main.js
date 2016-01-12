@@ -90,17 +90,21 @@ $(document).ready(function() {
         $(this).toggleClass('open');
 
         if (menu) {
+
             if (menu.hasClass('open')) {
-                menu.animate({
+                menu.removeClass('open').animate({
                     width: "0",
                     height: "0"
-                }).removeClass('open');
+                }, function() {
+                    menu.hide();
+                });
             } else {
                 menu.addClass('open').animate({
                     width: "320px",
                     height: "385px"
-                });
+                }).show();
             }
+
         }
     }
 

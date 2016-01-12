@@ -39,7 +39,7 @@
   &.open {
     span:nth-child(1) {
       top: 18px;
-      width: 0%;
+      width: 0;
       left: 50%;
     }
 
@@ -65,6 +65,7 @@
   position: absolute;
   right: 0;
   background-color: black;
+  display: none;
 
   nav {
     margin-top: 55px;

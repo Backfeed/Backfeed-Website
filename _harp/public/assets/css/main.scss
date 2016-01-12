@@ -108,6 +108,15 @@
     .fa-stack-2x {
       color: #2c2c2c;
     }
+
+    .fa-stack:hover {
+      transform: rotate(360deg) scale(1.2);
+      transition: 0.2s transform linear;
+
+      .fa-stack-2x {
+        color: $brand-primary;
+      }
+    }
   }
 }
 
@@ -118,15 +127,11 @@
 
   .illustration {
     @include make-col();
-    @include media-breakpoint-up(lg) {
-      @include make-col-span(6);
-    }
 
     img {
       @include img-fluid();
-      display: block;
       margin-left: auto;
-      margin-right: 50px;
+      margin-right: 20px;
     }
   }
 
@@ -141,8 +146,9 @@
     }
 
     @include media-breakpoint-up(lg) {
-      @include make-col-span(6);
       @include make-col-offset(0);
+      width: 590px;
+      flex-basis: auto;
     }
 
     h2 {
@@ -156,7 +162,6 @@
 
     p {
       font-size: 16px;
-      line-height: 1.692;
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
@@ -165,7 +170,8 @@
   }
 }
 
-h1 {
+h1,
+.h1 {
   text-align: center;
   padding-bottom: 4rem;
   padding-top: 4rem;

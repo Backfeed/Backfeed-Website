@@ -14,6 +14,21 @@ $enable-flex:               true;
 
 $body-color: #878787;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 1366px,
+  xl: 1920px
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 1306px,
+  xl: 1860px
+);
+
 $grid-gutter-width: 30px;
 
 $font-family-sans-serif: 'Open Sans', sans-serif;
