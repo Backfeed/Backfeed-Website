@@ -238,6 +238,14 @@ h1,
   padding: 0;
 }
 
+button.next-section {
+  position: absolute;
+  left: calc(50% - 9.3594px);
+  bottom: 4rem;
+  z-index: 4;
+  color: #adadad;
+}
+
 .tagline {
   font-size: 31px;
   font-family: $headings-font-family;
@@ -313,10 +321,6 @@ h1,
   z-index: 4;
 }
 
-button.next-section {
-  position: absolute;
-  left: calc(50% - 9.3594px);
-  bottom: 4rem;
-  z-index: 4;
-  color: #adadad;
+.list-unstyled {
+  margin-bottom: 0;
 }

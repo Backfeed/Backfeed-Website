@@ -100,6 +100,27 @@ body(class="#{current.path}")
                             .partner
                                 img(src="/assets/images/partners/#{ partner }")
         section#footer.fp-auto-height
+            .blog-posts-container.container-fluid
+                h2 Recent Blog Posts
+                ul.blog-posts.media-list.hidden-sm-down
+                    li.media
+                        .media-left
+                            a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank")
+                                img.media-object(src="/assets/images/blog-post-1.jpg", alt="Post featured image")
+                        .media-body
+                            h4.media-heading
+                                a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank") Thinking through law & code - The Future of the State and The Blockchain
+                            p In 1996, John Perry Barlow, american poet, writer for the grateful dead and cyber-libertarian activist had the admirable nerve to address the world economic forum in Davos, and share with the bewildered, Armani suited gentleman on scene the following “Declaration...
+                            time(datetime="2016-01-07") Thursday, 7 January 2016
+                    li.media
+                        .media-left
+                            a(href="Backfeeds' economic model for an decentralized age", target="_blank")
+                                img.media-object(src="/assets/images/blog-post-2.jpg", alt="Post featured image")
+                        .media-body
+                            h4.media-heading
+                                a(href="Backfeeds' economic model for an decentralized age", target="_blank") Backfeeds' economic model for an decentralized age
+                            p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system for decentralized organisations and collaborations (DCs). It is inherently designed to cooperatively create value and distribute it in...
+                            time(datetime="2015-12-21") Monday, 11 January 2016
             .footer-container
                 != partial("_partials/footer")
     != partial("_partials/scripts")

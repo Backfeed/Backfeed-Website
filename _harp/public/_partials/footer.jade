@@ -1,79 +1,54 @@
 footer
-    .col-md-4
-        img.footer-logo(src="/assets/images/logo/footer-logo.png", alt="Backfeed Logo")
-        form.subscribe-form(
-            action="//backfeed.us11.list-manage.com/subscribe/post?u=bd91582a4e889f710affca0e6&amp;id=040512b5ed",
-            method="post",
-            name="mc-embedded-subscribe-form",
-            target="_blank",
-            novalidate
-        )
-            .form-group
-                label.sr-only(for="mce-EMAIL") Subscribe to our mailing list
-                input#mce-EMAIL.form-control.form-control-lg(type="email", value="", name="EMAIL", placeholder="Email", required)
-            input(type="hidden", name="b_bd91582a4e889f710affca0e6_040512b5ed", tabindex="-1", value="")
-            .text-xs-center
-                input.btn.btn-primary(type="submit", value="Subscribe", name="subscribe")
-        hr
-        h3.footer-title Community
-        ul.community.list-unstyled
-            li
-                a(href="mailto:info@backfeed.cc", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-envelope.fa-stack-1x.fa-inverse
-                    | Email us
-            li
-                a(href="http://github.com/backfeed", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-github.fa-stack-1x.fa-inverse
-                    | GitHub
-            li
-                a(href="http://twitter.com/backfeed_cc", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-twitter.fa-stack-1x.fa-inverse
-                    | Twitter
-            li
-                a(href="http://facebook.com/backfeed_cc", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-facebook.fa-stack-1x.fa-inverse
-                    | Facebook
-            li
-                a(href="http://youtube.com/backfeed", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
-                    | YouTube
-            li
-                a(href="http://linkedin.com/company/backfeed", target="_blank")
-                    span.fa-stack
-                        i.fa.fa-circle.fa-stack-2x
-                        i.fa.fa-github.fa-stack-1x.fa-inverse
-                    | LinkedIn
-    .col-lg-4.col-md-6.hidden-sm-down
-        ul.blog-posts.media-list
-            li.media
-                .media-left
-                    a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank")
-                        img.media-object(src="/assets/images/blog-post-1.jpg", alt="Post featured image")
-                .media-body
-                    h4.media-heading
-                        a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank") Thinking through law & code - The Future of the State and The Blockchain
-                    p In 1996, John Perry Barlow, american poet, writer for the grateful dead and cyber-libertarian activist had the admirable nerve to address the world economic forum in Davos, and share with the bewildered, Armani suited gentleman on scene the following “Declaration...
-                    time(datetime="2016-01-07") Thursday, 7 January 2016
-            li.media
-                .media-left
-                    a(href="Backfeeds' economic model for an decentralized age", target="_blank")
-                        img.media-object(src="/assets/images/blog-post-2.jpg", alt="Post featured image")
-                .media-body
-                    h4.media-heading
-                        a(href="Backfeeds' economic model for an decentralized age", target="_blank") Backfeeds' economic model for an decentralized age
-                    p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system for decentralized organisations and collaborations (DCs). It is inherently designed to cooperatively create value and distribute it in...
-                    time(datetime="2015-12-21") Monday, 11 January 2016
-    .col-lg-4.hidden-md-down
-        a.twitter-timeline(href="https://twitter.com/Backfeed_cc", data-widget-id="685110981677170689", data-chrome="transparent noscrollbar noborders")
-        script.
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    img.footer-logo(src="/assets/images/logo/footer-logo.png", alt="Backfeed Logo")
+    form.subscribe-form(
+        action="//backfeed.us11.list-manage.com/subscribe/post?u=bd91582a4e889f710affca0e6&amp;id=040512b5ed",
+        method="post",
+        name="mc-embedded-subscribe-form",
+        target="_blank",
+        novalidate
+    )
+        .form-group
+            label.sr-only(for="mce-EMAIL") Subscribe to our mailing list
+            input#mce-EMAIL.form-control.form-control-lg(type="email", value="", name="EMAIL", placeholder="Email", required)
+        input(type="hidden", name="b_bd91582a4e889f710affca0e6_040512b5ed", tabindex="-1", value="")
+        .text-xs-center
+            input.btn.btn-primary(type="submit", value="Subscribe", name="subscribe")
+    hr
+    h3.footer-title Community
+    ul.community.list-unstyled
+        li
+            a(href="mailto:info@backfeed.cc", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-envelope.fa-stack-1x.fa-inverse
+                | Email us
+        li
+            a(href="http://github.com/backfeed", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-github.fa-stack-1x.fa-inverse
+                | GitHub
+        li
+            a(href="http://twitter.com/backfeed_cc", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                | Twitter
+        li
+            a(href="http://facebook.com/backfeed_cc", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                | Facebook
+        li
+            a(href="http://youtube.com/backfeed", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-youtube-play.fa-stack-1x.fa-inverse
+                | YouTube
+        li
+            a(href="http://linkedin.com/company/backfeed", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-github.fa-stack-1x.fa-inverse
+                | LinkedIn
