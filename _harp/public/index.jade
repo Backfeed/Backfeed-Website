@@ -8,7 +8,7 @@ body(class="#{current.path}")
         br
         | Decentralized Cooperation
     main#fullpage
-        section#intro
+        section#intro(data-anchor="home")
             .container
                 video#bgvid(autoplay, loop, poster="/assets/images/intro-bg.png")
                     source(src="/assets/intro-video.webm", type="video/webm")
@@ -20,7 +20,7 @@ body(class="#{current.path}")
                     .tagline-smaller.text-md-center Enabling massive open-source collaboration without central coordination
                 button.next-section.center-block.btn.btn-clean
                     i.fa.fa-angle-double-down.fa-2x
-        section#imagine
+        section#imagine(data-anchor="imagination")
             .container
                 .row-with-illustration
                     .illustration.hidden-sm-down
@@ -35,7 +35,7 @@ body(class="#{current.path}")
                         p Imagine the innovative potential of such organisations decoupled from the rigidities of hierarchical structures.
                         p For all of this and more…
                             strong Backfeed provides the infrastructure for decentralized cooperation.
-        section#protocol
+        section#protocol(data-anchor="protocol")
             h2.protocol-title.text-md-center
                 small The Infrastructure for
                 br
@@ -114,11 +114,11 @@ body(class="#{current.path}")
                             time(datetime="2016-01-07") Thursday, 7 January 2016
                     li.media
                         .media-left
-                            a(href="Backfeeds' economic model for an decentralized age", target="_blank")
+                            a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank")
                                 img.media-object(src="/assets/images/blog-post-2.jpg", alt="Post featured image")
                         .media-body
                             h4.media-heading
-                                a(href="Backfeeds' economic model for an decentralized age", target="_blank") Backfeeds' economic model for an decentralized age
+                                a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank") Backfeeds' economic model for an decentralized age
                             p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system for decentralized organisations and collaborations (DCs). It is inherently designed to cooperatively create value and distribute it in...
                             time(datetime="2015-12-21") Monday, 11 January 2016
             .footer-container

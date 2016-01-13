@@ -3,17 +3,6 @@
 @import "../../lib/bootstrap/scss/mixins";
 
 body.technical-resources {
-  @include media-breakpoint-up(md) {
-    background: url("/assets/images/technical-resources.png") no-repeat 110% -20px;
-  }
-
-  @include media-breakpoint-up(lg) {
-    background-position-x: 105%;
-  }
-
-  @include media-breakpoint-up(xl) {
-    background-position-x: 102%;
-  }
 
   h1 {
     padding-bottom: 33.5px;

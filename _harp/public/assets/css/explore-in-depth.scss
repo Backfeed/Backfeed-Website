@@ -29,7 +29,7 @@ body.explore-in-depth {
       margin-top: 80px;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       font-size: 28px;
     }
   }
@@ -75,7 +75,7 @@ body.explore-in-depth {
       }
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       margin-left: 15%;
       flex-basis: 70%;
     }
@@ -109,7 +109,7 @@ body.explore-in-depth {
 
   .lead {
     font-weight: bold;
-    color: #2c2c2c;
+    color: #505050;
 
     @include make-col();
 
@@ -118,7 +118,7 @@ body.explore-in-depth {
       font-weight: 800;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       @include make-col-span(4);
     }
   }
@@ -132,7 +132,7 @@ body.explore-in-depth {
       font-size: 16px;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       @include make-col-span(8);
     }
   }

@@ -31,6 +31,7 @@ $(document).ready(function() {
         fullPageContainer.fullpage({
             "sectionSelector": "main>section",
             "navigation": true,
+            "lockAnchors": true,
             onLeave: function(index, nextIndex, direction) {
                 var mainHeader = $('body>header');
                 if (direction == "up") mainHeader.css('transform', 'translateY(0%)');

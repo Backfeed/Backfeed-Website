@@ -7,21 +7,20 @@ footer
         target="_blank",
         novalidate
     )
+        h3.footer-title sign up for the newsletter
         .form-group
             label.sr-only(for="mce-EMAIL") Subscribe to our mailing list
             input#mce-EMAIL.form-control.form-control-lg(type="email", value="", name="EMAIL", placeholder="Email", required)
         input(type="hidden", name="b_bd91582a4e889f710affca0e6_040512b5ed", tabindex="-1", value="")
         .text-xs-center
             input.btn.btn-primary(type="submit", value="Subscribe", name="subscribe")
-    hr
-    h3.footer-title Community
     ul.community.list-unstyled
         li
-            a(href="mailto:info@backfeed.cc", target="_blank")
+            a(href="http://blog.backfeed.cc/rss/", target="_blank")
                 span.fa-stack
                     i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-envelope.fa-stack-1x.fa-inverse
-                | Email us
+                    i.fa.fa-rss.fa-stack-1x.fa-inverse
+                | RSS
         li
             a(href="http://github.com/backfeed", target="_blank")
                 span.fa-stack
@@ -50,5 +49,18 @@ footer
             a(href="http://linkedin.com/company/backfeed", target="_blank")
                 span.fa-stack
                     i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-github.fa-stack-1x.fa-inverse
+                    i.fa.fa-linkedin.fa-stack-1x.fa-inverse
                 | LinkedIn
+        hr
+        li
+            a(href="mailto:info@backfeed.cc", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-envelope.fa-stack-1x.fa-inverse
+                | Email us
+        li
+            a(href="http://blog.backfeed.cc/", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-file-text.fa-stack-1x.fa-inverse
+                | Blog
