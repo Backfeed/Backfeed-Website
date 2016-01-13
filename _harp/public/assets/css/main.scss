@@ -246,9 +246,14 @@ button.next-section {
   color: #adadad;
 }
 
+.intro-content {
+  position: relative;
+  z-index: 4;
+  font-family: $headings-font-family;
+}
+
 .tagline {
   font-size: 31px;
-  font-family: $headings-font-family;
   line-height: 1.296;
   margin-bottom: 45px;
 
@@ -300,6 +305,7 @@ button.next-section {
 }
 
 #bgvid {
+  visibility: hidden;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -311,13 +317,8 @@ button.next-section {
   width: 100%;
 }
 
-.fp-viewing-0 #bgvid {
+.fp-viewing-home #bgvid {
   visibility: visible;
-}
-
-.intro-content {
-  position: relative;
-  z-index: 4;
 }
 
 .list-unstyled {

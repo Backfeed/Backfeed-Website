@@ -16,7 +16,7 @@ body {
     padding-right: 15px;
     z-index: 2;
     color: white;
-    min-height: 55px;
+    height: $height-header;
     background-color: transparent;
     opacity: 0.96;
     transition: transform 200ms linear 0s, background-color 0.5s linear;
@@ -28,6 +28,6 @@ body {
   align-items: center;
 }
 
-body:not(.fp-viewing-0)>header {
+body:not(.fp-viewing-home)>header {
   background-color: #333;
 }

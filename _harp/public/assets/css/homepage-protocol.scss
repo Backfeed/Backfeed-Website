@@ -33,10 +33,10 @@
 }
 
 @include media-breakpoint-down(md) {
-  .fp-viewing-2,
-  .fp-viewing-3,
-  .fp-viewing-4,
-  .fp-viewing-5 {
+  .fp-viewing-protocol,
+  .fp-viewing-protocol-feature-a,
+  .fp-viewing-protocol-feature-b,
+  .fp-viewing-protocol-feature-c {
     .protocol-title {
       display: block;
     }
@@ -51,6 +51,7 @@
   padding: 20px 15px;
   width: 100%;
   font-weight: 500;
+  margin-top: $height-header;
 
   @include media-breakpoint-down(sm) {
     background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;

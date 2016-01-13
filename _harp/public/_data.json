@@ -97,7 +97,6 @@
     "advisers": [
       {
         "name": "Jordan Greenhall",
-        "role": "Chief Ratiocinator",
         "image_file": "advisors/Jordan.png",
         "social_profiles": {
           "linkedin": "http://www.linkedin.com/in/jordangreenhall",
@@ -106,8 +105,7 @@
         }
       },
       {
-        "name": "Michel Avital",
-        "role": "Chief Professor",
+        "name": "Boaz Tamir",
         "image_file": "advisors/Michel.png",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/michelavital",
@@ -116,7 +114,6 @@
       },
       {
         "name": "Lisa Gansky",
-        "role": "Chief Mesh",
         "image_file": "advisors/Lisa.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/lisagansky",

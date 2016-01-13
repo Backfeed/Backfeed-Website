@@ -51,7 +51,7 @@ body(class="#{current.path}")
                                 svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                                     rect.shape(height="60", width="320")
                                 .text Explore in Depth
-        section#protocol-feature-1.protocol-feature
+        section#protocol-feature-1.protocol-feature(data-anchor="protocol-feature-a")
             .container
                 .row
                     .protocol-body.text-xs-center.text-lg-left
@@ -59,7 +59,7 @@ body(class="#{current.path}")
                         h3.protocol-feature-title Dynamic Power Distribution
                         p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
                         a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-2.protocol-feature
+        section#protocol-feature-2.protocol-feature(data-anchor="protocol-feature-b")
             .container
                 .row
                     .protocol-body.text-xs-center.text-lg-left
@@ -67,7 +67,7 @@ body(class="#{current.path}")
                         h3.protocol-feature-title Proof of Value (PoV)
                         p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
                         a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-3.protocol-feature
+        section#protocol-feature-3.protocol-feature(data-anchor="protocol-feature-c")
             .container
                 .row
                     .protocol-body.text-xs-center.text-lg-left
@@ -75,7 +75,7 @@ body(class="#{current.path}")
                         h3.protocol-feature-title Accommodating Diversity
                         p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
                         a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-        section#applications
+        section#applications(data-anchor="apps")
             .container
                 .row-with-illustration
                     .illustration.hidden-sm-down
@@ -91,7 +91,7 @@ body(class="#{current.path}")
                                 svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                                     rect.shape(height="60", width="320")
                                 .text Explore in Depth
-        section#partners
+        section#partners(data-anchor="partner")
             .container-fluid
                 h2 Partners
                 ul.list-unstyled.row
@@ -100,9 +100,9 @@ body(class="#{current.path}")
                             .partner
                                 img(src="/assets/images/partners/#{ partner }")
         section#footer
-            .blog-posts-container.container-fluid
+            .blog-posts-container.container-fluid.hidden-sm-down
                 h2 Recent Blog Posts
-                ul.blog-posts.media-list.hidden-sm-down
+                ul.blog-posts.media-list
                     li.media
                         .media-left
                             a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank")
@@ -124,4 +124,3 @@ body(class="#{current.path}")
             .footer-container
                 != partial("_partials/footer")
     != partial("_partials/scripts")
-
