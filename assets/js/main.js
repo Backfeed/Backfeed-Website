@@ -31,7 +31,7 @@ $(function() {
         fullPageContainer.fullpage({
             "sectionSelector": "main>section",
             "navigation": true,
-            "lockAnchors": false,
+            "lockAnchors": true,
             "paddingTop": "55px",
             onLeave: function(index, nextIndex, direction) {
                 if (direction == "down") {
