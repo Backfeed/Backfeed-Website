@@ -25,7 +25,7 @@
   color: white;
 
   @include media-breakpoint-down(md) {
-    background: url("/assets/images/intro-bg.png");
+    background: url("/assets/images/intro-bg.jpg");
   }
 
   &:after {
