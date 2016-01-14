@@ -3,8 +3,9 @@ head
     != partial("_partials/head")
 body(class="#{current.path} #{current.source}")
     != partial("_partials/header")
-    != yield
-    #footer.p-t-3
+    main
+        != yield
+    #footer.p-t-3.p-b-3
         .footer-container
             != partial("_partials/footer")
     != partial("_partials/scripts")

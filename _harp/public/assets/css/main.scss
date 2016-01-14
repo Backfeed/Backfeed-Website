@@ -21,10 +21,6 @@
   }
 }
 
-@include media-breakpoint-landscape {
-
-}
-
 #intro {
   color: white;
 
@@ -79,10 +75,17 @@
   }
 }
 
+main:not(.fullpage-wrapper) {
+  padding-top: $height-header;
+}
+
 .team-members {
   @include make-row();
   justify-content: center;
   text-align: center;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-member {
@@ -207,7 +210,7 @@ h1,
     fill: transparent;
     stroke-dasharray: 296 540;
     stroke-dashoffset: -394;
-    stroke-width: 8px;
+    stroke-width: 6px;
     stroke: #B80443;
   }
 
@@ -328,6 +331,8 @@ button.next-section {
   padding-top: 16px;
   display: flex;
   justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
 
   .media {
     margin-bottom: 20px;

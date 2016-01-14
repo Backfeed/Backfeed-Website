@@ -1,13 +1,11 @@
 @import "variables";
+@import "mixins";
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
 body {
-  &.index>header {
-    position: fixed;
-  }
-
   &>header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-content: center;

@@ -1,15 +1,6 @@
-//.overlay
-//    button.btn.btn-clean.overlay-close
-//        i.fa.fa-close
-//    nav
-//        ul
-//            each url, name in public._data.menu
-//                li
-//                    a(href=url)= name
-
 header
     a.header-logo(href="/")
-        img(src="/assets/images/logo/header-logo.png")
+        img(src="/assets/images/logo/header-logo.svg", width="45")
     #trigger-menu
         span
         span
@@ -18,6 +9,7 @@ header
     .menu
         nav
             ul.list-unstyled
-                each url, name in public._data.menu
+                each item in public._data.menu
                     li
-                        a(href=url)= name
+                        i.fa.fa-lg(class=item.icon)
+                        a(href=item.url)= item.name

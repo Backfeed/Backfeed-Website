@@ -123,10 +123,10 @@
       },
       {
         "name": "Boaz Tamir",
-        "image_file": "advisors/Michel.png",
+        "image_file": "advisors/Boaz.png",
         "social_profiles": {
-          "linkedin": "https://www.linkedin.com/in/michelavital",
-          "twitter": "https://twitter.com/michelavital"
+          "linkedin": "https://il.linkedin.com/in/boaz-tamir-024ab35",
+          "website": "http://www.worldview.biz/"
         }
       },
       {
@@ -145,11 +145,31 @@
   "explore-in-depth": {
     "page_title": "Explore in Depth"
   },
-  "menu": {
-    "Home": "/",
-    "Technical Resources": "/technical-resources",
-    "Explore in Depth": "/explore-in-depth",
-    "Team": "/team",
-    "Blog": "http://blog.backfeed.cc/"
-  }
+  "menu": [
+    {
+      "name": "Home",
+      "url": "/",
+      "icon": "fa-home"
+    },
+    {
+      "name": "Technical Resources",
+      "url": "/technical-resources",
+      "icon": "fa-cog"
+    },
+    {
+      "name": "Explore in Depth",
+      "url": "/explore-in-depth",
+      "icon": "fa-search"
+    },
+    {
+      "name": "Team",
+      "url": "/team",
+      "icon": "fa-users"
+    },
+    {
+      "name": "Blog",
+      "url": "http://blog.backfeed.cc/",
+      "icon": "fa-home"
+    }
+  ]
 }

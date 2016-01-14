@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
@@ -66,13 +67,15 @@
   right: 0;
   background-color: black;
   display: none;
-  opacity: 0.95;
+  font-family: $headings-font-family;
+  text-transform: lowercase;
 
   nav {
     margin-top: 55px;
   }
 
   li {
+    position: relative;
     font-size: 16px;
     font-weight: 600;
 
@@ -84,16 +87,27 @@
       a {
         color: #ccc;
       }
-    }
-
-    a {
-      display: block;
-      color: #878787;
-      padding: 20px 30px;
-
-      &:hover {
-        text-decoration: none;
+      
+      .fa {
+        color: #8A8A8A;
       }
+    }
+  }
+
+  .fa {
+    position: absolute;
+    top: 38%;
+    left: 5%;
+    color: #2A2A2A;
+  }
+
+  a {
+    display: block;
+    color: #878787;
+    padding: 20px 30px 20px 50px;
+
+    &:hover {
+      text-decoration: none;
     }
   }
 }

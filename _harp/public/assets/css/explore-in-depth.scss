@@ -1,12 +1,20 @@
 @import "variables";
+@import "mixins";
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
 body.explore-in-depth {
+  @include media-breakpoint-up(lg) {
+    .container {
+      max-width: 1070px;
+    }
+  }
+
   h1 {
     @include media-breakpoint-up(md) {
-      background: url(/assets/images/header-explore-in-depth.jpg) center;
+      background: url(/assets/images/technical-resources-bg.png) 50% 80%;
       background-size: cover;
+      box-shadow: 0 -2px 15px #E9E9E9 inset;
      }
   }
 

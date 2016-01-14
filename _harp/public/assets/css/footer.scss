@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
@@ -21,10 +22,7 @@
   footer {
     display: flex;
     flex-direction: column;
-    //justify-content: space-around;
     align-items: center;
-    //padding-top: 80px;
-    //padding-bottom: 80px;
 
     @include media-breakpoint-up(md) {
       flex-grow: 3;
@@ -37,6 +35,10 @@
       width: 1306px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @include media-breakpoint-portrait {
+      flex-direction: column;
     }
   }
 }
