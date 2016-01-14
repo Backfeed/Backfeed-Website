@@ -69,13 +69,13 @@ $(function() {
         var protocolSection = $('#protocol');
         var protocolSectionRow = protocolSection.find('.protocol-features');
 
-        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-body').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
         var stickyProtocolTitle = $('body>.protocol-title');
