@@ -6,17 +6,17 @@
       {
         "name": "Lazooz",
         "url": "http://lazooz.org/",
-        "image_file": "partners/lazooz.png"
+        "image_file": "partners/lazooz.jpg"
       },
       {
         "name": "Ouishare",
         "url": "http://ouishare.net/",
-        "image_file": "partners/ouishare.png"
+        "image_file": "partners/ouishare.jpg"
       },
       {
         "name": "Slant News",
         "url": "http://slantnews.com/",
-        "image_file": "partners/slant.png"
+        "image_file": "partners/slant.jpg"
       }
     ]
   },
@@ -26,7 +26,7 @@
       {
         "name": "Matan Field",
         "role": "CEO & Chief Scientist",
-        "image_file": "team/Matan.png",
+        "image_file": "team/Matan.jpg",
         "social_profiles": {
           "linkedin": "https://il.linkedin.com/pub/matan-field/96/2b3/92a",
           "twitter": "https://twitter.com/MatanField"
@@ -35,7 +35,7 @@
       {
         "name": "Primavera De Filippi",
         "role": "Chief Innovation Officer",
-        "image_file": "team/Primavera.png",
+        "image_file": "team/Primavera.jpg",
         "social_profiles": {
           "linkedin": "https://fr.linkedin.com/pub/primavera-de-filippi/36/585/75",
           "twitter": "https://twitter.com/yaoeo",
@@ -45,7 +45,7 @@
       {
         "name": "Philippe Honigman",
         "role": "International Operations",
-        "image_file": "team/Philippe.png",
+        "image_file": "team/Philippe.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/honigman",
           "twitter": "https://twitter.com/phil_h"
@@ -54,7 +54,7 @@
       {
         "name": "Amnon Barnea",
         "role": "Designer",
-        "image_file": "team/Amnon.png",
+        "image_file": "team/Amnon.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/amnonbarnea",
           "twitter": "https://www.facebook.com/AmnonBarneaDesign"
@@ -63,7 +63,7 @@
       {
         "name": "Yaniv Keinan",
         "role": "Developer",
-        "image_file": "team/Yaniv.png",
+        "image_file": "team/Yaniv.jpg",
         "social_profiles": {
           "linkedin": "https://il.linkedin.com/in/yanivkeinan",
           "twitter": "https://twitter.com/YanivKeinan"
@@ -72,7 +72,7 @@
       {
         "name": "Adam Goldman",
         "role": "Developer",
-        "image_file": "team/Adam.png",
+        "image_file": "team/Adam.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/pub/adam-goldman/66/631/7a4"
         }
@@ -80,7 +80,7 @@
       {
         "name": "Ore Landau",
         "role": "Developer",
-        "image_file": "team/Ore.png",
+        "image_file": "team/Ore.jpg",
         "social_profiles": {
           "linkedin": "http://linkedin.com/in/Ore4444",
           "twitter": "http://twitter.com/Ore4444"
@@ -89,7 +89,7 @@
       {
         "name": "Naomi Steinitz",
         "role": "Operations & HR",
-        "image_file": "team/Naomi.png",
+        "image_file": "team/Naomi.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/pub/naomi-steinitz/18/100/5a3"
         }
@@ -97,7 +97,7 @@
       {
         "name": "Julian Feder",
         "role": "Communicator",
-        "image_file": "team/Julian.png",
+        "image_file": "team/Julian.jpg",
         "social_profiles": {
           "facebook": "https://www.facebook.com/julian.d.feder"
         }
@@ -105,7 +105,7 @@
       {
         "name": "Elad Shtilerman",
         "role": "Algorithm Developer",
-        "image_file": "team/Elad.png",
+        "image_file": "team/Elad.jpg",
         "social_profiles": {
           "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108"
         }
@@ -114,7 +114,7 @@
     "advisers": [
       {
         "name": "Jordan Greenhall",
-        "image_file": "advisors/Jordan.png",
+        "image_file": "advisors/Jordan.jpg",
         "social_profiles": {
           "linkedin": "http://www.linkedin.com/in/jordangreenhall",
           "twitter": "http://twitter.com/jgreenhall",
@@ -123,7 +123,7 @@
       },
       {
         "name": "Boaz Tamir",
-        "image_file": "advisors/Boaz.png",
+        "image_file": "advisors/Boaz.jpg",
         "social_profiles": {
           "linkedin": "https://il.linkedin.com/in/boaz-tamir-024ab35",
           "website": "http://www.worldview.biz/"
