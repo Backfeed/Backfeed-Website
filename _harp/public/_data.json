@@ -6,17 +6,17 @@
       {
         "name": "Lazooz",
         "url": "http://lazooz.org/",
-        "image_file": "partners/lazooz.jpg"
+        "image_file": "partners/lazooz.png"
       },
       {
         "name": "Ouishare",
         "url": "http://ouishare.net/",
-        "image_file": "partners/ouishare.jpg"
+        "image_file": "partners/ouishare.png"
       },
       {
         "name": "Slant News",
         "url": "http://slantnews.com/",
-        "image_file": "partners/slant.jpg"
+        "image_file": "partners/slant.png"
       }
     ]
   },
