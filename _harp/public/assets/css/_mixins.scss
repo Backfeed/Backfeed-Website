@@ -1,0 +1,11 @@
+@mixin media-breakpoint-portrait {
+  @media only screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-landscape {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}

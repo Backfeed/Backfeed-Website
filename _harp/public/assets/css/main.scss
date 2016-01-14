@@ -1,5 +1,9 @@
+@import "variables";
+@import "mixins";
+
 @import "bootstrap";
 @import "font-icons";
+
 @import "header";
 @import "footer";
 @import "menu";
@@ -11,6 +15,7 @@
 .fp-tableCell {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #fp-nav {
@@ -22,6 +27,9 @@
   }
 }
 
+@include media-breakpoint-landscape {
+
+}
 
 #intro {
   @include media-breakpoint-down(md) {
@@ -121,43 +129,43 @@
 }
 
 .row-with-illustration {
-  @include make-row();
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  .illustration {
-    @include make-col();
+  @include media-breakpoint-portrait {
+    flex-direction: column;
+  }
 
-    img {
-      @include img-fluid();
-      margin-left: auto;
-      margin-right: 20px;
-    }
+  .illustration,
+  .text-content {
+    @include make-col();
   }
 
   .text-content {
-    @include make-col();
-    @include make-col-span(12);
+    @include media-breakpoint-landscape {
+      flex-basis: 50%;
+    }
 
     @include media-breakpoint-up(md) {
-      @include make-col-span(10);
-      @include make-col-offset(1);
-      margin-top: 5%;
+      @include media-breakpoint-portrait {
+        margin-top: 5vh;
+        padding-left: 15vw;
+        padding-right: 15vw;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 500;
+      }
     }
 
     @include media-breakpoint-up(lg) {
-      @include make-col-offset(0);
-      width: 590px;
-      flex-basis: auto;
+      width: 730px;
     }
 
     h2 {
       margin-bottom: 28px;
-
-      @include media-breakpoint-up(md) {
-        font-size: 40px;
-        font-weight: 500;
-      }
     }
 
     p {

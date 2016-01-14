@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     var fullPageContainer = $('#fullpage');
     if (fullPageContainer) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
             media: '(min-width: 768px)',
             entry: desktopizeProtocolSection,
             exit: function() {
-                console.log('leaving 420');
+                console.log('leaving 768');
             },
             both: function() {
                 console.log('changing state');
@@ -19,7 +19,7 @@ $(document).ready(function() {
             media: '(min-width: 768px)',
             entry: desktopizeFooter,
             exit: function() {
-                console.log('leaving 420');
+                console.log('leaving 768');
             },
             both: function() {
                 console.log('changing state');
@@ -33,9 +33,11 @@ $(document).ready(function() {
             "navigation": true,
             "lockAnchors": true,
             onLeave: function(index, nextIndex, direction) {
+                /*
                 var mainHeader = $('body>header');
                 if (direction == "up") mainHeader.css('transform', 'translateY(0%)');
                 if (direction == "down") mainHeader.css('transform', 'translateY(-100%)');
+                 */
 
                 if (direction == "down") {
                     mediaCheck({
@@ -109,33 +111,8 @@ $(document).ready(function() {
         }
     }
 
-/*
-    var triggerBttn = document.getElementById('trigger-overlay'),
-        overlay = document.querySelector('.overlay'),
-        closeBttn = overlay.querySelector('button.overlay-close');
-
-    if (triggerBttn) triggerBttn.addEventListener( 'click', toggleOverlay );
-    if (closeBttn) closeBttn.addEventListener( 'click', toggleOverlay );
-
-    function toggleOverlay() {
-        if (overlay) {
-            if (overlay.classList.contains('open')) {
-                overlay.classList.remove('open');
-                overlay.classList.add('close');
-                var onEndTransitionFn = function(ev) {
-                    if (ev.propertyName !== 'visibility') return;
-                    this.removeEventListener('transitionend', onEndTransitionFn);
-                    overlay.classList.remove('close');
-                };
-                overlay.addEventListener('transitionend', onEndTransitionFn);
-            } else if (!overlay.classList.contains('close')) {
-                overlay.classList.add('open');
-            }
-        }
-    }
-*/
-
     $('.next-section').on('click', function() {
         $.fn.fullpage.moveSectionDown();
     });
+
 });
