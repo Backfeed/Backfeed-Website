@@ -32,6 +32,8 @@ $(function() {
             "sectionSelector": "main>section",
             "navigation": true,
             "lockAnchors": true,
+            "recordHistory": true,
+            "paddingTop": "55px",
             onLeave: function(index, nextIndex, direction) {
                 /*
                 var mainHeader = $('body>header');

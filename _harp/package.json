@@ -4,8 +4,9 @@
   "description": "Backfeed.cc built with Harp.js\r ==============================",
   "main": "../index.html",
   "scripts": {
+    "precompile": "mv ../.idea/ ../..",
     "compile": "harp compile . ..",
-    "postcompile": "cp README.md CNAME ..",
+    "postcompile": "cp README.md CNAME .. && mv ../../.idea ..",
     "server": "harp server"
   },
   "repository": {
