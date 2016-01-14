@@ -21,7 +21,7 @@ body(class="#{current.path}")
                 button.next-section.center-block.btn.btn-clean
                     i.fa.fa-angle-double-down.fa-2x
         section#imagine(data-anchor="imagination")
-            .row-with-illustration
+            .row-with-illustration.homepage-section-wrapper
                 .illustration.hidden-sm-down
                     img.img-fluid(alt="Illustration", src="/assets/images/imagine.png")
                 .text-content
@@ -39,43 +39,35 @@ body(class="#{current.path}")
                 small The Infrastructure for
                 br
                 | Decentralized Cooperation
-            .container
-                .row
-                    .protocol-section
-                        p.protocol-subtitle.text-md-center Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
-                        p.hidden-md-up.lead.m-t-3 The Backfeed protocol provides....
-                        .protocol-features
-                        .text-sm-center.m-t-2
-                            a.btn.btn-animated.btn-in-section.hidden-sm-down(href="/explore-in-depth")
-                                svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
-                                    rect.shape(height="60", width="320")
-                                .text Explore in Depth
-        section#protocol-feature-1.protocol-feature(data-anchor="protocol-feature-a")
-            .container
-                .row
-                    .protocol-body.text-xs-center.text-lg-left
-                        .protocol-icon.icon-dynamic
-                        h3.protocol-feature-title Dynamic Power Distribution
-                        p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
-                        a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-2.protocol-feature(data-anchor="protocol-feature-b")
-            .container
-                .row
-                    .protocol-body.text-xs-center.text-lg-left
-                        .protocol-icon.icon-proof
-                        h3.protocol-feature-title Proof of Value (PoV)
-                        p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
-                        a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-        section#protocol-feature-3.protocol-feature(data-anchor="protocol-feature-c")
-            .container
-                .row
-                    .protocol-body.text-xs-center.text-lg-left
-                        .protocol-icon.icon-diversity
-                        h3.protocol-feature-title Accommodating Diversity
-                        p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
-                        a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+            .protocol-section.homepage-section-wrapper
+                p.protocol-subtitle.text-md-center Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
+                p.hidden-md-up.lead.m-t-3 The Backfeed protocol provides....
+                .protocol-features
+                .text-sm-center.m-t-2.hidden-sm-down
+                    a.btn.btn-animated.btn-in-section(href="/explore-in-depth")
+                        svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
+                            rect.shape(height="60", width="320")
+                        .text Explore in Depth
+        section#protocol-feature-1(data-anchor="protocol-feature-a")
+            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+                .protocol-icon.icon-dynamic
+                h3.protocol-feature-title Dynamic Power Distribution
+                p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
+                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+        section#protocol-feature-2(data-anchor="protocol-feature-b")
+            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+                .protocol-icon.icon-proof
+                h3.protocol-feature-title Proof of Value (PoV)
+                p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
+                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+        section#protocol-feature-3(data-anchor="protocol-feature-c")
+            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+                .protocol-icon.icon-diversity
+                h3.protocol-feature-title Accommodating Diversity
+                p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
+                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#applications(data-anchor="apps")
-            .row-with-illustration
+            .row-with-illustration.homepage-section-wrapper
                 .illustration.hidden-sm-down
                     img.img-fluid(alt="Illustration", src="/assets/images/applications.png")
                 .text-content
@@ -90,15 +82,15 @@ body(class="#{current.path}")
                                 rect.shape(height="60", width="320")
                             .text Explore in Depth
         section#partners(data-anchor="partner")
-            .container-fluid
-                h2 Partners
-                ul.list-unstyled.row
-                    .partners
-                        for partner in public.assets.images.partners._contents
-                            .partner
-                                img(src="/assets/images/partners/#{ partner }")
+            h2 Partners
+            ul.list-unstyled
+                .partners
+                    each partner in public._data.index.partners
+                        .partner
+                            a(href=partner.url, target="_blank")
+                                img(src="/assets/images/#{partner.image_file}", alt="#{partner.name} logo")
         section#footer
-            .blog-posts-container.container-fluid.hidden-sm-down
+            .blog-posts-container.container-fluid.hidden-md-down
                 h2 Recent Blog Posts
                 ul.blog-posts.media-list
                     li.media
@@ -119,6 +111,5 @@ body(class="#{current.path}")
                                 a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank") Backfeeds' economic model for an decentralized age
                             p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system for decentralized organisations and collaborations (DCs). It is inherently designed to cooperatively create value and distribute it in...
                             time(datetime="2015-12-21") Monday, 11 January 2016
-            .footer-container
-                != partial("_partials/footer")
+            != partial("_partials/footer")
     != partial("_partials/scripts")

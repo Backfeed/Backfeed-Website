@@ -3,14 +3,14 @@
 @import "../../lib/bootstrap/scss/mixins";
 
 #protocol {
+  background: url("/assets/images/protocol-bg.png") no-repeat center calc(50% + #{$height-header});
+  background-size: 90%;
+
   .protocol-title {
     display: block;
   }
 
   @include media-breakpoint-down(sm) {
-    background: url("/assets/images/protocol-bg.png") no-repeat center center;
-    background-size: 90%;
-
     p {
       color: #4d4d4d;
 
@@ -18,6 +18,8 @@
         color: #363636;
         font-size: 14px;
         font-weight: 600;
+        align-self: flex-start;
+        margin-bottom: 0;
       }
     }
   }
@@ -51,14 +53,13 @@
   padding: 20px 15px;
   width: 100%;
   font-weight: 500;
-  margin-top: $height-header;
 
   @include media-breakpoint-down(sm) {
     background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;
     position: absolute;
+    top: $height-header;
     font-size: 18px;
-    height: 103.6px;
-    padding-bottom: 44px;
+    padding-bottom: 24px;
   }
 
   small {
@@ -77,10 +78,9 @@
 }
 
 .protocol-section {
-  @include make-col();
+  flex-direction: column;
 
   @include media-breakpoint-up(md) {
-    @include make-col-span(12);
     color: #cbcbcb;
   }
 
@@ -92,33 +92,26 @@
 }
 
 .protocol-features {
-  @include make-row();
+  display: none;
   margin-top: 4rem;
   justify-content: center;
 
-  @include media-breakpoint-up(lg) {
-    width: 1306px;
-    justify-content: space-around;
-  }
-}
-
-.protocol-body {
-  @include make-col();
-  max-width: 335px;
-
-  @include media-breakpoint-up(lg) {
-    p {
-      text-align: left;
-    }
+  @include media-breakpoint-up(md) {
+    display: flex;
   }
 }
 
 .protocol-feature {
   @include make-col();
+  max-width: 335px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include media-breakpoint-up(xs) {
-    @include make-col-span(12);
-    padding-top: 40px;
+  @include media-breakpoint-up(lg) {
+    p {
+      text-align: left;
+    }
   }
 }
 
@@ -145,9 +138,12 @@
 
 .protocol-icon {
   font-size: 55px;
-  margin-bottom: 19px;
-  color: #dfdfdf;
-  text-align: center;
-  padding-bottom: 23px;
-  border-bottom: 1px solid #858585;
+  margin-bottom: 25px;
+  color: #4E4E4E;
+
+  @include media-breakpoint-up(md) {
+    text-align: center;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #858585;
+  }
 }

@@ -12,12 +12,6 @@
 @import "explore-in-depth";
 @import "technical-resources";
 
-.fp-tableCell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #fp-nav {
   @include media-breakpoint-down(md) {
     display: none;
@@ -32,14 +26,10 @@
 }
 
 #intro {
-  @include media-breakpoint-down(md) {
-    background: url("/assets/images/intro-bg.png");
-  }
-
   color: white;
 
-  .fp-tableCell {
-    justify-content: center;
+  @include media-breakpoint-down(md) {
+    background: url("/assets/images/intro-bg.png");
   }
 
   &:after {
@@ -128,23 +118,31 @@
   }
 }
 
-.row-with-illustration {
+.homepage-section-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
+.row-with-illustration {
   @include media-breakpoint-portrait {
     flex-direction: column;
   }
 
-  .illustration,
-  .text-content {
-    @include make-col();
-  }
+  .illustration {}
 
   .text-content {
+    font-size: 13px;
+
     @include media-breakpoint-landscape {
       flex-basis: 50%;
+      padding-left: 67px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
     }
 
     @include media-breakpoint-up(md) {
@@ -161,6 +159,7 @@
     }
 
     @include media-breakpoint-up(lg) {
+      flex-basis: auto;
       width: 730px;
     }
 
@@ -169,8 +168,6 @@
     }
 
     p {
-      font-size: 16px;
-
       &:not(:last-of-type) {
         margin-bottom: 20px;
       }
