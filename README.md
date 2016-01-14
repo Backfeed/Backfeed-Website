@@ -4,7 +4,7 @@ Backfeed.cc built with Harp.js
 
 ## Getting started
 
-1) Install Harp globally
+1) Install Harp in your computer
 
 ```
 $ sudo npm install -g harp
