@@ -32,15 +32,8 @@ $(function() {
             "sectionSelector": "main>section",
             "navigation": true,
             "lockAnchors": true,
-            "recordHistory": true,
             "paddingTop": "55px",
             onLeave: function(index, nextIndex, direction) {
-                /*
-                var mainHeader = $('body>header');
-                if (direction == "up") mainHeader.css('transform', 'translateY(0%)');
-                if (direction == "down") mainHeader.css('transform', 'translateY(-100%)');
-                 */
-
                 if (direction == "down") {
                     mediaCheck({
                         media: '(max-width: 768px)',
@@ -69,13 +62,13 @@ $(function() {
         var protocolSection = $('#protocol');
         var protocolSectionRow = protocolSection.find('.protocol-features');
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').removeClass('homepage-section-wrapper').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').removeClass('homepage-section-wrapper').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
-        protocolSection.next().find('.protocol-feature').appendTo(protocolSectionRow);
+        protocolSection.next().find('.protocol-feature').removeClass('homepage-section-wrapper').appendTo(protocolSectionRow);
         protocolSection.next().remove();
 
         var stickyProtocolTitle = $('body>.protocol-title');

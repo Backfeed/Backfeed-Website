@@ -37,7 +37,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #444;
     top: 0;
     z-index: 3;
     left: 0;
@@ -160,7 +160,7 @@
 
     @include media-breakpoint-up(lg) {
       flex-basis: auto;
-      width: 730px;
+      width: 610px;
     }
 
     h2 {
@@ -192,10 +192,6 @@ h1,
 
 .btn-primary {
   padding: 6px 14px;
-}
-
-.btn-in-section {
-  margin-top: 1rem;
 }
 
 .btn-rounded {
@@ -257,6 +253,15 @@ button.next-section {
   font-family: $headings-font-family;
 }
 
+.intro-logotype {
+  margin-bottom: 3rem;
+  width: 90%;
+
+  @include media-breakpoint-up(md) {
+    width: 400px;
+  }
+}
+
 .tagline {
   font-size: 31px;
   line-height: 1.296;
@@ -290,6 +295,9 @@ button.next-section {
 .tagline-smaller {
   font-size: 16px;
   font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
 
   @include media-breakpoint-up(md) {
     font-size: 18px;
@@ -297,6 +305,58 @@ button.next-section {
 
   @include media-breakpoint-up(lg) {
     font-size: 20px;
+  }
+}
+
+.blog-posts-container {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #252525;
+
+  h2 {
+    font-weight: 500;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 11.5px;
+    color: #e9e9e9;
+  }
+}
+
+.blog-posts {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+
+  .media {
+    margin-bottom: 20px;
+    flex-basis: 360px;
+
+    &:not(:last-of-type) {
+      margin-right: 6rem;
+    }
+  }
+
+  .media-body {
+    color: #878787;
+  }
+
+  .media-heading {
+    margin-bottom: 1rem;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.375;
+
+    a {
+      color: #878787;
+    }
+  }
+
+  time {
+    color: #f90b6d;
+    font-size: 13px;
   }
 }
 

@@ -14,11 +14,12 @@ body(class="#{current.path}")
                     source(src="/assets/intro-video.webm", type="video/webm")
                     source(src="/assets/intro-video.mp4", type="video/mp4")
                 .intro-content.text-md-center
+                    img.intro-logotype(src="/assets/images/intro-logotype.svg")
                     p.tagline
                         span.tagline-bigger A Social Operating System
                         span.tagline-middle &nbsp;for Decentralized Organizations
                     .tagline-smaller.text-md-center Enabling massive open-source collaboration without central coordination
-                button.next-section.center-block.btn.btn-clean
+                button.next-section.center-block.btn.btn-clean.hidden-md-down
                     i.fa.fa-angle-double-down.fa-2x
         section#imagine(data-anchor="imagination")
             .row-with-illustration.homepage-section-wrapper
@@ -44,28 +45,34 @@ body(class="#{current.path}")
                 p.hidden-md-up.lead.m-t-3 The Backfeed protocol provides....
                 .protocol-features
                 .text-sm-center.m-t-2.hidden-sm-down
-                    a.btn.btn-animated.btn-in-section(href="/explore-in-depth")
+                    a.btn.btn-animated.m-t-1(href="/explore-in-depth")
                         svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                             rect.shape(height="60", width="320")
                         .text Explore in Depth
         section#protocol-feature-1(data-anchor="protocol-feature-a")
-            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+            .protocol-feature.homepage-section-wrapper
                 .protocol-icon.icon-dynamic
-                h3.protocol-feature-title Dynamic Power Distribution
-                p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
-                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+                hr
+                div
+                    h3.protocol-feature-title Dynamic Power Distribution
+                    p The Backfeed protocol implements a meritocratic governance system, dynamically adjusting the power that every peer enjoys in a decentralized network.
+                a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#protocol-feature-2(data-anchor="protocol-feature-b")
-            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+            .protocol-feature.homepage-section-wrapper
                 .protocol-icon.icon-proof
-                h3.protocol-feature-title Proof of Value (PoV)
-                p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
-                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+                hr
+                div
+                    h3.protocol-feature-title Proof of Value (PoV)
+                    p Just as Bitcoin’s Proof of Work (PoW) algorithm rewards miners according to the amount of computational resources provided to the Bitcoin network, Backfeed’s PoV mechanism enables a decentralized network of peers to reach consensus about the perceived value of any contribution within the network, and reward it accordingly.
+                a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#protocol-feature-3(data-anchor="protocol-feature-c")
-            .protocol-feature.text-xs-center.text-lg-left.homepage-section-wrapper
+            .protocol-feature.homepage-section-wrapper
                 .protocol-icon.icon-diversity
-                h3.protocol-feature-title Accommodating Diversity
-                p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
-                a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+                hr
+                div
+                    h3.protocol-feature-title Accommodating Diversity
+                    p The Backfeed protocol drives communities into consensus by empowering aligned individuals, and translate disagreement into a diversity of networks.
+                a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#applications(data-anchor="apps")
             .row-with-illustration.homepage-section-wrapper
                 .illustration.hidden-sm-down
@@ -76,8 +83,8 @@ body(class="#{current.path}")
                     p The Backfeed protocol can fuel a variety of applications, including decentralized journalism, decentralized insurance, decentralized ride-sharing applications and any other enterprise that would benefit from  the decentralized, indirect coordination of large groups of individuals.
                     p With Backfeed, it will soon be possible to bootstrap decentralized organisations on top of the blockchain as easy as one would deploy a website today.
                     .text-xs-center
-                        a.btn.btn-primary.btn-in-section.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-                        a.btn.btn-animated.btn-in-section.hidden-sm-down(href="/explore-in-depth")
+                        a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
+                        a.btn.btn-animated.m-t-1.hidden-sm-down(href="/explore-in-depth")
                             svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                                 rect.shape(height="60", width="320")
                             .text Explore in Depth
@@ -90,7 +97,7 @@ body(class="#{current.path}")
                             a(href=partner.url, target="_blank")
                                 img(src="/assets/images/#{partner.image_file}", alt="#{partner.name} logo")
         section#footer
-            .blog-posts-container.container-fluid.hidden-md-down
+            .blog-posts-container.hidden-sm-down
                 h2 Recent Blog Posts
                 ul.blog-posts.media-list
                     li.media
@@ -100,7 +107,7 @@ body(class="#{current.path}")
                         .media-body
                             h4.media-heading
                                 a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank") Thinking through law & code - The Future of the State and The Blockchain
-                            p In 1996, John Perry Barlow, american poet, writer for the grateful dead and cyber-libertarian activist had the admirable nerve to address the world economic forum in Davos, and share with the bewildered, Armani suited gentleman on scene the following “Declaration...
+                            p In 1996, John Perry Barlow, american poet, writer for the grateful dead and cyber-libertarian activist had the admirable nerve to address the world economic forum in Davos...
                             time(datetime="2016-01-07") Thursday, 7 January 2016
                     li.media
                         .media-left
@@ -109,7 +116,7 @@ body(class="#{current.path}")
                         .media-body
                             h4.media-heading
                                 a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank") Backfeeds' economic model for an decentralized age
-                            p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system for decentralized organisations and collaborations (DCs). It is inherently designed to cooperatively create value and distribute it in...
+                            p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system...
                             time(datetime="2015-12-21") Monday, 11 January 2016
             != partial("_partials/footer")
     != partial("_partials/scripts")
