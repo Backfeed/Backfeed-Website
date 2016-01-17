@@ -6,24 +6,12 @@ $(function() {
 
         mediaCheck({
             media: '(min-width: 768px)',
-            entry: desktopizeProtocolSection,
-            exit: function() {
-                console.log('leaving 768');
-            },
-            both: function() {
-                console.log('changing state');
-            }
+            entry: desktopizeProtocolSection
         });
 
         mediaCheck({
             media: '(min-width: 768px)',
-            entry: desktopizeFooter,
-            exit: function() {
-                console.log('leaving 768');
-            },
-            both: function() {
-                console.log('changing state');
-            }
+            entry: desktopizeFooter
         });
     }
 
@@ -33,6 +21,7 @@ $(function() {
             "navigation": true,
             "lockAnchors": true,
             "paddingTop": "55px",
+            "recordHistory": true,
             onLeave: function(index, nextIndex, direction) {
                 if (direction == "down") {
                     mediaCheck({
@@ -82,9 +71,7 @@ $(function() {
     var menuTriggerButton = document.getElementById('trigger-menu'),
         menu = $('.menu');
 
-    if (menuTriggerButton) menuTriggerButton.addEventListener('click', toggleMenu);
-
-    function toggleMenu() {
+    if (menuTriggerButton) menuTriggerButton.addEventListener('click', function() {
         $(this).toggleClass('open');
 
         if (menu) {
@@ -104,7 +91,9 @@ $(function() {
             }
 
         }
-    }
+    });
+
+
 
     $('.next-section').on('click', function() {
         $.fn.fullpage.moveSectionDown();
