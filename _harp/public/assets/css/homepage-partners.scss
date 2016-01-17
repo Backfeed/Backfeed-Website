@@ -61,3 +61,11 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  #partners h2 {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+  }
+}

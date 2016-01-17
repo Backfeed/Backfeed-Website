@@ -4,6 +4,8 @@
 @import "../../lib/bootstrap/scss/mixins";
 
 body.technical-resources {
+  background: url("/assets/images/technical-resources-bg.png") no-repeat center;
+  background-size: cover;
 
   h1 {
     padding-bottom: 33.5px;
@@ -12,11 +14,6 @@ body.technical-resources {
       text-align: left;
       font-weight: normal;
     }
-  }
-
-  .technical-resources-wrapper {
-    background: url("/assets/images/technical-resources-bg.png") no-repeat center;
-    background-size: cover;
   }
 
   .technical-resources-intro {

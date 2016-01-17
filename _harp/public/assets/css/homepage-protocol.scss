@@ -31,6 +31,7 @@
 
     p {
       font-size: 14px;
+      text-align: left;
     }
   }
 }
@@ -111,6 +112,12 @@
   flex-direction: column;
   flex-basis: 280px;
 
+  hr {
+    border-top: 0;
+    height: 1px;
+    background: #858585;
+  }
+
   @include media-breakpoint-up(lg) {
     flex-basis: 300px;
 
@@ -118,12 +125,7 @@
       margin-right: 7rem;
     }
 
-    p {
-      text-align: left;
-    }
-
     hr {
-      border-top-color: #858585;
       width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -149,6 +151,15 @@
   @include media-breakpoint-up(md) {
     color: white;
     text-align: left;
+  }
+}
+
+.protocol-feature-description {
+  max-width: 370px;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    max-width: none;
   }
 }
 

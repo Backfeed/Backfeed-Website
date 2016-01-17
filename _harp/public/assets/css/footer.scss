@@ -53,6 +53,22 @@ body.index {}
   }
 }
 
+//only Technical Resources, which is short on height so footer should be fixed to bottom
+@include media-breakpoint-landscape {
+  @include media-breakpoint-up(md) {
+    body.technical-resources {
+      height: 100%;
+
+      #footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+    }
+  }
+
+}
+
 .footer-logo {
   margin-bottom: 4rem;
 

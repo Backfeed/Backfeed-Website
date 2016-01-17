@@ -12,6 +12,14 @@
 @import "explore-in-depth";
 @import "technical-resources";
 
+html {
+  height: 100%;
+}
+
+html.wf-loading {
+  display: none;
+}
+
 #fp-nav {
   @include media-breakpoint-down(md) {
     display: none;
@@ -23,10 +31,6 @@
 
 #intro {
   color: white;
-
-  @include media-breakpoint-down(md) {
-    background: url("/assets/images/intro-bg.jpg");
-  }
 
   &:after {
     content: '';
@@ -385,6 +389,8 @@ button.next-section {
   z-index: 3;
   height: 100%;
   width: 100%;
+  background: url("/assets/images/intro-bg.jpg") no-repeat 0 0;
+  background-size: cover;
 }
 
 .fp-viewing-home #bgvid {
