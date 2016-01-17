@@ -38,6 +38,7 @@ html.wf-loading .spinner {
 
 html.wf-active .spinner {
   opacity: 0;
+  z-index: 0;
 }
 
 #fp-nav {
