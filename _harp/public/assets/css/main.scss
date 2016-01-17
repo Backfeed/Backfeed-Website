@@ -29,7 +29,7 @@ html {
   right: 0;
   z-index: 999;
   background-color: white;
-  transition: opacity 0.5s linear;
+  transition: opacity, z-index 0.5s linear;
 }
 
 html.wf-loading .spinner {
@@ -38,7 +38,7 @@ html.wf-loading .spinner {
 
 html.wf-active .spinner {
   opacity: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 #fp-nav {
