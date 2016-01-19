@@ -1,0 +1,270 @@
+#fp-nav {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  .right {
+    right: 10px;
+  }
+}
+
+.homepage-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/**
+ * Above the Fold
+ */
+#intro {
+  color: white;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    top: 0;
+    z-index: 3;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+}
+
+.intro-content {
+  position: relative;
+  z-index: 4;
+  font-family: $headings-font-family;
+}
+
+.intro-logotype {
+  margin-bottom: 3rem;
+  width: 90%;
+
+  @include media-breakpoint-up(md) {
+    width: 400px;
+  }
+}
+
+.tagline {
+  font-size: 31px;
+  line-height: 1.296;
+  margin-bottom: 45px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 39px;
+    margin-bottom: 35px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 36px;
+  }
+}
+
+.tagline-bigger {
+  font-size: 31px;
+  font-family: $headings-font-family;
+
+  @include media-breakpoint-up(md) {
+    font-size: 42px;
+  }
+}
+
+.tagline-middle {
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.tagline-smaller {
+  font-size: 16px;
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+#bgvid {
+  visibility: hidden;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/intro-bg.jpg") no-repeat 0 0;
+  background-size: cover;
+}
+
+.fp-viewing-home #bgvid {
+  visibility: visible;
+}
+/**
+ * END: Above the Fold
+ */
+
+
+/**
+ * Imagine & Applications
+ */
+#imagine {
+  @include media-breakpoint-down(sm) {
+    background: url("/assets/images/imagine-bg.png") no-repeat center center;
+    background-size: 90%;
+
+    p {
+      color: #4d4d4d;
+    }
+  }
+}
+
+#applications {
+  @include media-breakpoint-down(sm) {
+    background: url("/assets/images/applications-bg.png") no-repeat center center $gray;
+    background-size: 90%;
+    color: white;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-color: white;
+
+    p,
+    .btn-animated .text {
+      color: $body-color;
+    }
+  }
+
+  .text-content h2 {
+    @include media-breakpoint-down(sm) {
+      color: #e9e9e9;
+    }
+  }
+}
+
+.row-with-illustration {
+  @include media-breakpoint-portrait {
+    flex-direction: column;
+  }
+
+  .illustration {}
+
+  .text-content {
+    font-size: 13px;
+
+    @include media-breakpoint-landscape {
+      flex-basis: 50%;
+      padding-left: 67px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(md) {
+      @include media-breakpoint-portrait {
+        margin-top: 5vh;
+        padding-left: 15vw;
+        padding-right: 15vw;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 500;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: auto;
+      width: 610px;
+    }
+
+    h2 {
+      margin-bottom: 28px;
+    }
+
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+/**
+ * END: Imagine & Applications
+ */
+
+
+/**
+ * Blog Posts
+ */
+.blog-posts-container {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #252525;
+
+  h2 {
+    font-weight: 500;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 11.5px;
+    color: #e9e9e9;
+  }
+}
+
+.blog-posts {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .media {
+    margin-bottom: 20px;
+    flex-basis: 360px;
+
+    &:not(:last-of-type) {
+      margin-right: 6rem;
+    }
+  }
+
+  .media-body {
+    color: #878787;
+  }
+
+  .media-heading {
+    margin-bottom: 1rem;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.375;
+
+    a {
+      color: #878787;
+    }
+  }
+
+  time {
+    color: #f90b6d;
+    font-size: 13px;
+  }
+}
+/**
+ * END: Blog Posts
+ */

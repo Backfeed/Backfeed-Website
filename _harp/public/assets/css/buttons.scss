@@ -1,0 +1,60 @@
+.btn:focus {
+  outline: none;
+}
+
+.btn-primary {
+  padding: 6px 14px;
+}
+
+.btn-rounded {
+  border-radius: 15px;
+}
+
+.btn-animated {
+  &:hover .shape {
+    animation: 0.5s btn-animated linear forwards;
+  }
+
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 296 540;
+    stroke-dashoffset: -394;
+    stroke-width: 6px;
+    stroke: #B80443;
+  }
+
+  .text {
+    color: white;
+    font-family: $headings-font-family;
+    font-size: 18px;
+    letter-spacing: 4px;
+    position: relative;
+    top: -49px;
+  }
+}
+
+@keyframes btn-animated {
+  0% {
+    stroke-dasharray: 296 540;
+    stroke-dashoffset: -394;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.btn-clean {
+  background: none;
+  padding: 0;
+}
+
+button.next-section {
+  position: absolute;
+  left: calc(50% - 9.3594px);
+  bottom: 4rem;
+  z-index: 4;
+  color: #adadad;
+}
