@@ -1,34 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 391.21 414.97" width="150px" height="150px">
-    <defs>
-        <style>
-            #triangle {
-                transform: scale(0.4) translate(265px, 285px);
-            }
-
-            #circle {
-                transform: translate(200px, 200px);
-            }
-
-            #circle circle {
-                stroke: black;
-                fill: none;
-                stroke-width: 3px;
-                stroke-dasharray: 80 22;
-            }
-
-            .a {
-                fill: black;
-                stroke: black;
-                stroke-miterlimit: 10;
-                stroke-width: 3px;
-            }
-        </style>
-    </defs>
-
+<svg id="graphic-spinner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 391.21 414.97" width="150px" height="150px">
     <g id="circle">
-        <circle cx="0" cy="0" r="150">
-            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0" to="360" begin="0" dur="5s" repeatCount="indefinite" />
-        </circle>
+        <circle cx="0" cy="0" r="150" />
     </g>
 
     <g id="triangle">

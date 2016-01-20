@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/mixins";
+
+#graphic-spinner {
+  #triangle {
+    transform: scale(0.4) translate(265px, 285px);
+  }
+
+  #circle {
+    transform: translate(200px, 200px);
+  }
+
+  #circle circle {
+    stroke: black;
+    fill: none;
+    stroke-width: 3px;
+    stroke-dasharray: 80 22;
+
+    animation-name: spinner;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+
+  .a {
+    fill: black;
+    stroke: black;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

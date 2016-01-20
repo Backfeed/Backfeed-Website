@@ -159,9 +159,9 @@
       "icon": "fa-users"
     },
     {
-      "name": "Blog",
-      "url": "http://blog.backfeed.cc/",
-      "icon": "fa-home"
+      "name": "Backfeed Magazine",
+      "url": "http://magazine.backfeed.cc/",
+      "icon": "fa-file-text"
     }
   ]
 }
