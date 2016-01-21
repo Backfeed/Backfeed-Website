@@ -71,11 +71,30 @@ $(function() {
     var menuTriggerButton = document.getElementById('trigger-menu'),
         menu = $('.menu');
 
-    if (menuTriggerButton) menuTriggerButton.addEventListener('click', function() {
+    if (menuTriggerButton) {
+        menuTriggerButton.addEventListener('click', toggleMenu);
+        //document.body.addEventListener('click', closeMenu);
+    }
+
+    //TODO
+    function closeMenu(e) {
+        if (e.target == document.getElementById('trigger-menu')) return;
+        if (e.target == $('.menu')[0]) return;
+
+        if (menu.hasClass('open')) {
+            menu.removeClass('open').animate({
+                width: "0",
+                height: "0"
+            }, function() {
+                menu.hide();
+            });
+        }
+    }
+
+    function toggleMenu() {
         $(this).toggleClass('open');
 
         if (menu) {
-
             if (menu.hasClass('open')) {
                 menu.removeClass('open').animate({
                     width: "0",
@@ -89,11 +108,8 @@ $(function() {
                     height: "385px"
                 }).show();
             }
-
         }
-    });
-
-
+    }
 
     $('.next-section').on('click', function() {
         $.fn.fullpage.moveSectionDown();
