@@ -73,15 +73,15 @@ $(function() {
 
     if (menuTriggerButton) {
         menuTriggerButton.addEventListener('click', toggleMenu);
-        //document.body.addEventListener('click', closeMenu);
+        document.body.addEventListener('click', closeMenu);
     }
 
-    //TODO
     function closeMenu(e) {
-        if (e.target == document.getElementById('trigger-menu')) return;
-        if (e.target == $('.menu')[0]) return;
+        if ($(e.target).is('#trigger-menu, #trigger-menu>span, .menu')) return;
 
-        if (menu.hasClass('open')) {
+        if (menu && menu.hasClass('open')) {
+            menuTriggerButton.classList.toggle('open');
+
             menu.removeClass('open').animate({
                 width: "0",
                 height: "0"
@@ -92,7 +92,7 @@ $(function() {
     }
 
     function toggleMenu() {
-        $(this).toggleClass('open');
+        menuTriggerButton.classList.toggle('open');
 
         if (menu) {
             if (menu.hasClass('open')) {
