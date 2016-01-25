@@ -52,7 +52,8 @@ body(class="#{current.path}")
                         .text Explore in Depth
         section#protocol-feature-1(data-anchor="protocol-feature-a")
             .protocol-feature.homepage-section-wrapper
-                .protocol-icon.icon-dynamic
+                .protocol-icon
+                    include /assets/images/icons/beehive.svg
                 hr
                 div
                     h3.protocol-feature-title Dynamic Power Distribution
@@ -60,7 +61,8 @@ body(class="#{current.path}")
                 a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#protocol-feature-2(data-anchor="protocol-feature-b")
             .protocol-feature.homepage-section-wrapper
-                .protocol-icon.icon-proof
+                .protocol-icon
+                    include /assets/images/icons/heart.svg
                 hr
                 div
                     h3.protocol-feature-title Proof of Value (PoV)
@@ -68,7 +70,8 @@ body(class="#{current.path}")
                 a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
         section#protocol-feature-3(data-anchor="protocol-feature-c")
             .protocol-feature.homepage-section-wrapper
-                .protocol-icon.icon-diversity
+                .protocol-icon
+                    include /assets/images/icons/fractal.svg
                 hr
                 div
                     h3.protocol-feature-title Accommodating Diversity
@@ -99,24 +102,24 @@ body(class="#{current.path}")
                                 img(src="/assets/images/#{partner.image_file}", alt="#{partner.name} logo")
         section#footer
             .blog-posts-container.hidden-sm-down
-                h2 Recent Blog Posts
+                h2 Highlights from our Magazine
                 ul.blog-posts.media-list
                     li.media
                         .media-left
-                            a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank")
+                            a(href="http://magazine.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank")
                                 img.media-object(src="/assets/images/blog-post-1.jpg", alt="Post featured image")
                         .media-body
                             h4.media-heading
-                                a(href="http://blog.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank") Thinking through law & code - The Future of the State and The Blockchain
+                                a(href="http://magazine.backfeed.cc/thinking-through-law-code-the-future-of-the-state-and-the-blockchain/", target="_blank") Thinking through law & code - The Future of the State and The Blockchain
                             p In 1996, John Perry Barlow, american poet, writer for the grateful dead and cyber-libertarian activist had the admirable nerve to address the world economic forum in Davos...
                             time(datetime="2016-01-07") Thursday, 7 January 2016
                     li.media
                         .media-left
-                            a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank")
+                            a(href="http://magazine.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank")
                                 img.media-object(src="/assets/images/blog-post-2.jpg", alt="Post featured image")
                         .media-body
                             h4.media-heading
-                                a(href="http://blog.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank") Backfeed's economic model for a decentralized age
+                                a(href="http://magazine.backfeed.cc/backfeeds-economic-model-for-an-decentralized-age/", target="_blank") Backfeed's economic model for a decentralized age
                             p The Backfeed Protocol with its Proof of Value (PoV) algorithm, reputation system and token mechanism, provides a comprehensive social operating system...
                             time(datetime="2015-12-21") Monday, 11 January 2016
             != partial("_partials/footer")

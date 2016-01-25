@@ -12,6 +12,12 @@
   }
 }
 
+.fp-tableCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .homepage-section-wrapper {
   display: flex;
   justify-content: center;

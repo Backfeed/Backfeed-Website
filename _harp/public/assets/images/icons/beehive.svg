@@ -1,0 +1,14 @@
+<svg id="icon-beehive" class="icon" viewBox="-7 -7 85 85">
+    <polyline class="beehive-fragment" points="45.74 34.1 45.74 27.86 56.55 21.61 67.36 27.86 67.36 34.11" />
+    <polyline class="beehive-fragment" points="40.34 43.46 45.73 40.35 56.55 46.59 56.55 59.07 51.15 62.19" />
+    <polyline class="beehive-fragment" points="29.52 43.47 34.93 46.58 34.92 59.07 24.11 65.32 18.71 62.19" />
+    <polyline class="beehive-fragment" points="24.13 34.11 24.11 40.34 13.3 46.58 2.5 40.35 2.5 34.1" />
+    <polyline class="beehive-fragment" points="29.52 24.73 24.13 27.87 13.31 21.63 13.31 9.14 18.71 6.02" />
+    <polyline class="beehive-fragment" points="40.34 24.75 34.94 21.63 34.94 9.14 45.74 2.89 51.15 6.01" />
+    <polyline class="beehive-fragment" points="45.74 34.1 45.74 40.34 56.55 46.58 67.36 40.35 67.36 34.11" />
+    <polyline class="beehive-fragment" points="40.34 43.46 34.92 46.58 34.92 59.07 45.74 65.32 51.15 62.19" />
+    <polyline class="beehive-fragment" points="29.52 43.47 24.11 40.35 13.3 46.58 13.3 59.07 18.71 62.19" />
+    <polyline class="beehive-fragment" points="24.13 34.11 24.11 27.86 13.31 21.63 2.5 27.86 2.5 34.1" />
+    <polyline class="beehive-fragment" points="29.52 24.73 34.93 21.61 34.92 9.13 24.13 2.89 18.71 6.02" />
+    <polyline class="beehive-fragment" points="40.34 24.75 45.74 27.86 56.55 21.61 56.55 9.13 51.15 6.01" />
+</svg>

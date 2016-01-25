@@ -3,6 +3,9 @@
 @import "../../lib/bootstrap/scss/variables";
 @import "../../lib/bootstrap/scss/mixins";
 
+/**
+ * Spinner
+ */
 #graphic-spinner {
   #triangle {
     transform: scale(0.4) translate(265px, 285px);
@@ -35,8 +38,149 @@
     0% {
       transform: rotate(0deg);
     }
-    100% {
+    to {
       transform: rotate(360deg);
     }
   }
 }
+/**
+ * END: Spinner
+ */
+
+svg.icon {
+  visibility: hidden;
+
+  @include media-breakpoint-up(md) {
+    visibility: visible;
+  }
+
+  &.animated {
+    visibility: visible;
+  }
+}
+
+/**
+ * Beehive
+ */
+#icon-beehive.animated .beehive-fragment {
+  animation-name: beehive;
+}
+
+.beehive-fragment {
+  fill: none;
+  stroke: #4E4E4E;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  stroke-dasharray: 160;
+  stroke-linecap: square;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.26, 0.23, 0.42, 0.74);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+  @include media-breakpoint-up(md) {
+    stroke: white;
+  }
+}
+
+@keyframes beehive {
+  from {
+    stroke-dashoffset: 160;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/**
+ * END: Beehive
+ */
+
+
+/**
+ * Fractal
+ */
+#icon-fractal.animated .fractal-dot {
+  animation-name: fractal;
+}
+
+.fractal-dot {
+  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+
+  opacity: 0;
+  fill: #4E4E4E;
+
+  @include media-breakpoint-up(md) {
+    fill: white;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 7 {
+  .fractal-family:nth-of-type(#{$i}) {
+
+    @for $j from 1 through 8 - $i {
+      .fractal-dot:nth-of-type(#{$j}) {
+        animation-delay: #{0.1 * $j + $i / 3}s;
+      }
+    }
+
+  }
+}
+
+@keyframes fractal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/**
+ * END: Fractal
+ */
+
+
+/**
+ * Heart
+ */
+#icon-heart.animated .heart-line {
+  animation-name: heart;
+}
+
+.heart-line {
+  fill: none;
+  stroke: #4E4E4E;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2.5px;
+  stroke-dasharray: 160;
+
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+  @include media-breakpoint-up(md) {
+    stroke: white;
+  }
+}
+
+#heart-island-right,
+#heart-island-left {
+  animation-duration: 2s;
+}
+
+@keyframes heart {
+  from {
+    stroke-dashoffset: 160;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/**
+ * END: Heart
+ */

@@ -45,6 +45,15 @@
       display: block;
     }
   }
+
+  #protocol,
+  #protocol-feature-1,
+  #protocol-feature-2,
+  #protocol-feature-3 {
+    .fp-tableCell {
+      padding-top: $height-protocol-title;
+    }
+  }
 }
 
 .protocol-title {
@@ -134,12 +143,16 @@
 }
 
 .protocol-icon {
-  font-size: 55px;
-  color: #4E4E4E;
+  width: 75px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include media-breakpoint-up(md) {
     text-align: center;
-    color: white;
   }
 }
 
