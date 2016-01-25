@@ -1,17 +1,13 @@
 $(function() {
 
     var fullPageContainer = $('#fullpage');
+
     if (fullPageContainer) {
         initFullPage(fullPageContainer);
 
         mediaCheck({
             media: '(min-width: 768px)',
-            entry: desktopizeProtocolSection
-        });
-
-        mediaCheck({
-            media: '(min-width: 768px)',
-            entry: desktopizeFooter
+            entry: desktopizeHomepage
         });
     }
 
@@ -21,7 +17,19 @@ $(function() {
             "navigation": true,
             "lockAnchors": true,
             "paddingTop": "55px",
-            "recordHistory": true,
+            afterLoad: function(anchorLink, index) {
+                switch (anchorLink) {
+                    case 'protocol-feature-a':
+                        document.getElementById('icon-beehive').classList.add('animated');
+                        break;
+                    case 'protocol-feature-b':
+                        document.getElementById('icon-heart').classList.add('animated');
+                        break;
+                    case 'protocol-feature-c':
+                        document.getElementById('icon-fractal').classList.add('animated');
+                        break;
+                }
+            },
             onLeave: function(index, nextIndex, direction) {
                 if (direction == "down") {
                     mediaCheck({
@@ -37,17 +45,20 @@ $(function() {
         });
     }
 
-    function desktopizeFooter() {
+    function desktopizeHomepage() {
         $.fn.fullpage.destroy('all');
 
-        $('#partners').prependTo('#footer');
+        desktopizeFooter();
+        desktopizeProtocolSection();
 
         initFullPage(fullPageContainer);
     }
 
-    function desktopizeProtocolSection() {
-        $.fn.fullpage.destroy('all');
+    function desktopizeFooter() {
+        $('#partners').prependTo('#footer');
+    }
 
+    function desktopizeProtocolSection() {
         var protocolSection = $('#protocol');
         var protocolSectionRow = protocolSection.find('.protocol-features');
 
@@ -64,24 +75,23 @@ $(function() {
         if (stickyProtocolTitle) stickyProtocolTitle.remove();
 
         protocolSection.find('.protocol-title').prependTo(protocolSection.find('.protocol-section'));
-
-        initFullPage(fullPageContainer);
     }
+
 
     var menuTriggerButton = document.getElementById('trigger-menu'),
         menu = $('.menu');
 
     if (menuTriggerButton) {
         menuTriggerButton.addEventListener('click', toggleMenu);
-        //document.body.addEventListener('click', closeMenu);
+        document.body.addEventListener('click', closeMenu);
     }
 
-    //TODO
     function closeMenu(e) {
-        if (e.target == document.getElementById('trigger-menu')) return;
-        if (e.target == $('.menu')[0]) return;
+        if ($(e.target).is('#trigger-menu, #trigger-menu>span, .menu')) return;
 
-        if (menu.hasClass('open')) {
+        if (menu && menu.hasClass('open')) {
+            menuTriggerButton.classList.toggle('open');
+
             menu.removeClass('open').animate({
                 width: "0",
                 height: "0"
@@ -92,7 +102,7 @@ $(function() {
     }
 
     function toggleMenu() {
-        $(this).toggleClass('open');
+        menuTriggerButton.classList.toggle('open');
 
         if (menu) {
             if (menu.hasClass('open')) {

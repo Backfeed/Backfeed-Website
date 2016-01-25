@@ -1,0 +1,52 @@
+<svg id="icon-fractal" class="icon" viewBox="0 0 57 43">
+
+    <g class="fractal-family" id="A">
+        <circle class="fractal-dot" cx="28.22" cy="34.46" r="4.75"/>
+        <circle class="fractal-dot" cx="32.35" cy="25.28" r="3.66"/>
+        <circle class="fractal-dot" cx="37.12" cy="18.45" r="2.95"/>
+        <circle class="fractal-dot" cx="41.57" cy="12.48" r="2.28"/>
+        <circle class="fractal-dot" cx="46.02" cy="7.95" r="1.9"/>
+        <circle class="fractal-dot" cx="50.47" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="54.92" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="B">
+        <circle class="fractal-dot" cx="23.62" cy="25.28" r="3.66"/>
+        <circle class="fractal-dot" cx="19.32" cy="18.45" r="2.95"/>
+        <circle class="fractal-dot" cx="14.78" cy="12.48" r="2.28"/>
+        <circle class="fractal-dot" cx="10.25" cy="7.95" r="1.9"/>
+        <circle class="fractal-dot" cx="5.96" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="1.35" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="C">
+        <circle class="fractal-dot" cx="28.22" cy="18.45" r="2.95"/>
+        <circle class="fractal-dot" cx="32.67" cy="12.48" r="2.28"/>
+        <circle class="fractal-dot" cx="37.12" cy="7.95" r="1.9"/>
+        <circle class="fractal-dot" cx="41.65" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="46.02" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="D">
+        <circle class="fractal-dot" cx="23.69" cy="12.48" r="2.28"/>
+        <circle class="fractal-dot" cx="19.15" cy="7.95" r="1.9"/>
+        <circle class="fractal-dot" cx="14.78" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="10.25" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="E">
+        <circle class="fractal-dot" cx="28.22" cy="7.95" r="1.9"/>
+        <circle class="fractal-dot" cx="32.59" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="37.12" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="F">
+        <circle class="fractal-dot" cx="23.69" cy="4.38" r="1.58"/>
+        <circle class="fractal-dot" cx="19.15" cy="1.35" r="1.35"/>
+    </g>
+
+    <g class="fractal-family" id="G">
+        <circle class="fractal-dot" cx="28.22" cy="1.35" r="1.35"/>
+    </g>
+
+</svg>
