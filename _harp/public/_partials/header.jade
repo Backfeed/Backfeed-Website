@@ -12,4 +12,4 @@ header
                 each item in public._data.menu
                     li
                         i.fa.fa-lg(class=item.icon)
-                        a(href=item.url)= item.name
+                        a(href=item.url, target=_.startsWith(item.url, 'http://') ? '_blank' : '')= item.name

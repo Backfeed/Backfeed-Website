@@ -18,7 +18,7 @@
   #circle circle {
     stroke: black;
     fill: none;
-    stroke-width: 3px;
+    stroke-width: 2.5px;
     stroke-dasharray: 80 22;
 
     animation-name: spinner;
@@ -27,68 +27,40 @@
     animation-iteration-count: infinite;
   }
 
-  .a {
+  .triangle-path {
     fill: black;
     stroke: black;
     stroke-miterlimit: 10;
     stroke-width: 3px;
-  }
-
-  @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
   }
 }
 /**
  * END: Spinner
  */
 
-svg.icon {
-  visibility: hidden;
-
-  @include media-breakpoint-up(md) {
-    visibility: visible;
-  }
-
-  &.animated {
-    visibility: visible;
-  }
-}
 
 /**
  * Beehive
  */
-#icon-beehive.animated .beehive-fragment {
-  animation-name: beehive;
+.icon-beehive.animated .beehive-fragment {
+  animation-name: icon-beehive;
 }
 
 .beehive-fragment {
-  fill: none;
-  stroke: #4E4E4E;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
-  stroke-dasharray: 160;
-  stroke-linecap: square;
-  animation-duration: 10s;
+  animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.26, 0.23, 0.42, 0.74);
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 
+  fill: none;
+  stroke: #4E4E4E;
+  stroke-miterlimit: 10;
+  stroke-width: 2.5px;
+  stroke-dasharray: 40;
+  stroke-linecap: round;
+
   @include media-breakpoint-up(md) {
     stroke: white;
-  }
-}
-
-@keyframes beehive {
-  from {
-    stroke-dashoffset: 160;
-  }
-  to {
-    stroke-dashoffset: 0;
   }
 }
 /**
@@ -97,57 +69,16 @@ svg.icon {
 
 
 /**
- * Fractal
- */
-#icon-fractal.animated .fractal-dot {
-  animation-name: fractal;
-}
-
-.fractal-dot {
-  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-duration: 0.5s;
-
-  opacity: 0;
-  fill: #4E4E4E;
-
-  @include media-breakpoint-up(md) {
-    fill: white;
-    opacity: 1;
-  }
-}
-
-@for $i from 1 through 7 {
-  .fractal-family:nth-of-type(#{$i}) {
-
-    @for $j from 1 through 8 - $i {
-      .fractal-dot:nth-of-type(#{$j}) {
-        animation-delay: #{0.1 * $j + $i / 3}s;
-      }
-    }
-
-  }
-}
-
-@keyframes fractal {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/**
- * END: Fractal
- */
-
-
-/**
  * Heart
  */
-#icon-heart.animated .heart-line {
-  animation-name: heart;
+.icon-heart.animated {
+  .heart-inner-line {
+    animation-name: icon-heart;
+  }
+
+  .heart-outer-line {
+    animation-name: fade-in;
+  }
 }
 
 .heart-line {
@@ -155,32 +86,103 @@ svg.icon {
   stroke: #4E4E4E;
   stroke-linecap: round;
   stroke-miterlimit: 10;
-  stroke-width: 2.5px;
-  stroke-dasharray: 160;
-
-  animation-duration: 5s;
-  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+  stroke-width: 3px;
 
   @include media-breakpoint-up(md) {
     stroke: white;
   }
 }
 
-#heart-island-right,
-#heart-island-left {
-  animation-duration: 2s;
+.heart-inner-line {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+  stroke-dasharray: 40;
 }
 
-@keyframes heart {
+.heart-outer-line {
+  animation-delay: 0.25s;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}
+/**
+ * END: Heart
+ */
+
+
+/**
+ * Fractal
+ */
+.icon-fractal.animated .fractal-dot {
+  animation-name: fade-in;
+}
+
+.fractal-dot {
+  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  //animation-duration: 0.5s;
+
+  opacity: 0;
+  fill: #4E4E4E;
+
+  @include media-breakpoint-up(md) {
+    fill: white;
+  }
+}
+
+@for $i from 1 through 7 {
+  .fractal-family:nth-of-type(#{$i}) {
+    @for $j from 1 through 8 - $i {
+      .fractal-dot:nth-of-type(#{$j}) {
+        animation-delay: #{0.05 * $j + $i / 4}s;
+      }
+    }
+  }
+}
+/**
+ * END: Fractal
+ */
+
+
+@keyframes spinner {
   from {
-    stroke-dashoffset: 160;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes icon-beehive {
+  from {
+    stroke-dashoffset: 40;
   }
   to {
     stroke-dashoffset: 0;
   }
 }
-/**
- * END: Heart
- */
+
+
+@keyframes icon-heart {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

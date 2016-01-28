@@ -150,9 +150,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  visibility: hidden;
 
   @include media-breakpoint-up(md) {
     text-align: center;
+  }
+
+  &.animated {
+    visibility: visible;
   }
 }
 
