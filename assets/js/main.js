@@ -3,7 +3,7 @@ $(function() {
     var fullPageContainer = $('#fullpage');
 
     if (fullPageContainer) {
-        initFullPage(fullPageContainer);
+        initFullPage();
 
         mediaCheck({
             media: '(min-width: 768px)',
@@ -19,14 +19,30 @@ $(function() {
             "paddingTop": "55px",
             afterLoad: function(anchorLink, index) {
                 switch (anchorLink) {
+                    case 'protocol':
+                        var icons = this.find('.protocol-icon'),
+                            firstIcon = icons[0],
+                            secondIcon = icons[1],
+                            thirdIcon = icons[2];
+
+                        if (icons.length !== 0) {
+                            firstIcon.classList.add('animated');
+                            prefixedEventListener(firstIcon, 'animationend', function(e) {
+                                secondIcon.classList.add('animated');
+                                prefixedEventListener(secondIcon, 'animationend', function(e) {
+                                    thirdIcon.classList.add('animated');
+                                });
+                            });
+                        }
+                        break;
                     case 'protocol-feature-a':
-                        document.getElementById('icon-beehive').classList.add('animated');
+                        $('.icon-beehive').addClass('animated');
                         break;
                     case 'protocol-feature-b':
-                        document.getElementById('icon-heart').classList.add('animated');
+                        $('.icon-heart').addClass('animated');
                         break;
                     case 'protocol-feature-c':
-                        document.getElementById('icon-fractal').classList.add('animated');
+                        $('.icon-fractal').addClass('animated');
                         break;
                 }
             },
@@ -51,7 +67,7 @@ $(function() {
         desktopizeFooter();
         desktopizeProtocolSection();
 
-        initFullPage(fullPageContainer);
+        initFullPage();
     }
 
     function desktopizeFooter() {
@@ -124,5 +140,13 @@ $(function() {
     $('.next-section').on('click', function() {
         $.fn.fullpage.moveSectionDown();
     });
+
+    var pfx = ["webkit", "moz", "MS", "o", ""];
+    function prefixedEventListener(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p]+type, callback, false);
+        }
+    }
 
 });
