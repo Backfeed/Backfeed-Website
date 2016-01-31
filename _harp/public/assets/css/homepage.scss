@@ -230,12 +230,19 @@
   justify-content: center;
   background-color: #252525;
 
+  @media (max-height: 730px) {
+    display: none;
+  }
+
   h2 {
     font-weight: 500;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 11.5px;
-    color: #e9e9e9;
+
+    a {
+      color: #e9e9e9;
+    }
   }
 }
 
