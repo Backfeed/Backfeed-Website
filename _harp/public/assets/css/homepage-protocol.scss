@@ -106,6 +106,7 @@
   display: none;
   justify-content: space-around;
   align-items: flex-start;
+  margin-top: 4rem;
 
   @include media-breakpoint-up(md) {
     display: flex;
@@ -189,6 +190,14 @@
 
   @include media-breakpoint-up(md) {
     max-width: none;
+  }
+}
+
+.protocol-more-button {
+  @include media-breakpoint-landscape {
+    @media (max-height: 730px) {
+      display: none;
+    }
   }
 }
 

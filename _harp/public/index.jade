@@ -2,6 +2,8 @@ doctype html
 head
     != partial("_partials/head")
 body(class="#{current.path}")
+    .spinner
+        include /assets/images/logo/spinner-logo.svg
     != partial("_partials/header")
     h2.protocol-title
         small The Infrastructure for
@@ -45,7 +47,7 @@ body(class="#{current.path}")
                 p.protocol-subtitle.text-md-center Backfeed develops a distributed governance system for blockchain-based applications allowing for the collaborative creation and distribution of value in spontaneously emerging networks of peers.
                 p.hidden-md-up.lead.m-t-3 The Backfeed protocol provides....
                 .protocol-features
-                .text-sm-center.m-t-2.hidden-sm-down
+                .protocol-more-button.text-sm-center.m-t-2.hidden-sm-down
                     a.btn.btn-animated.m-t-1(href="/explore-in-depth")
                         svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                             rect.shape(height="60", width="320")
@@ -88,7 +90,7 @@ body(class="#{current.path}")
                     p Our goal is to enable the bootstrapping of decentralized organizations on top of the blockchain as easily as one would deploy a website today.
                     .text-xs-center
                         a.btn.btn-primary.m-t-1.btn-rounded.hidden-md-up(href="/explore-in-depth") Explore in Depth
-                        a.btn.btn-animated.m-t-1.hidden-sm-down(href="/explore-in-depth")
+                        a.btn.btn-animated.hidden-sm-down(href="/explore-in-depth")
                             svg(height="60", width="320", xmlns="http://www.w3.org/2000/svg")
                                 rect.shape(height="60", width="320")
                             .text Explore in Depth
