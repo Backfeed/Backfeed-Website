@@ -29,6 +29,5 @@
   },
   "_source": "git://github.com/sparkbox/mediaCheck.git",
   "_target": "~0.4.6",
-  "_originalSource": "mediaCheck",
-  "_direct": true
+  "_originalSource": "mediaCheck"
 }

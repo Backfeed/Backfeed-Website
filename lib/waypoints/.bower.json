@@ -25,6 +25,5 @@
   },
   "_source": "git://github.com/imakewebthings/waypoints.git",
   "_target": "~4.0.0",
-  "_originalSource": "waypoints",
-  "_direct": true
+  "_originalSource": "waypoints"
 }
