@@ -15,12 +15,17 @@ $ sudo npm install -g harp
 $ git clone git@github.com:Backfeed/Backfeed-Website.git
 ```
 
-3) Start Harp server from within the `_harp` directory
+3) Install Bower components (`$ npm install -g bower` if you haven't already)
 ```
-$ cd _harp && npm run server
+$ cd Backfeed-Website/_harp/ && bower install
 ```
 
-4) Visit [http://localhost:9000/](http://localhost:9000/) in your browser and follow the instructions in the page
+4) Start Harp server from within the `_harp` directory
+```
+$ npm run server
+```
+
+5) Visit [http://localhost:9000/](http://localhost:9000/) in your browser and follow the instructions in the page
 
 > Tip: Comas and quotes are important when writing JSON. Follow the same structure as the sample data to avoid syntax issues.
 

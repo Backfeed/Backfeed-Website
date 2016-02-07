@@ -59,9 +59,10 @@
 .protocol-title {
   display: none;
   font-size: 3.076923076923077rem;
+  padding: 10px 15px;
   z-index: 1;
   color: white;
-  padding: 20px 15px;
+
   width: 100%;
   font-weight: 500;
 
@@ -71,6 +72,10 @@
     top: $height-header;
     font-size: 18px;
     padding-bottom: 24px;
+  }
+
+  @media (min-height: 660px) {
+    padding: 20px 15px;
   }
 
   small {
@@ -86,6 +91,12 @@
   max-width: 748px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
+
+  @media (min-height: 660px) {
+    margin-bottom: 1rem;
+  }
+
 }
 
 .protocol-section {
@@ -106,7 +117,7 @@
   display: none;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   @include media-breakpoint-up(md) {
     display: flex;
@@ -116,9 +127,10 @@
     justify-content: center;
   }
 
-  @media (min-height: 730px) {
+  @media (min-height: 660px) {
     margin-top: 4rem;
   }
+
 }
 
 .protocol-feature {
@@ -174,7 +186,7 @@
 }
 
 .protocol-feature-title {
-  margin-bottom: 22px;
+  margin-bottom: 5px;
   text-align: center;
   font-weight: 300;
 
@@ -182,6 +194,11 @@
     color: white;
     text-align: left;
   }
+
+  @media (min-height: 660px) {
+    margin-bottom: 22px;
+  }
+
 }
 
 .protocol-feature-description {
@@ -191,6 +208,11 @@
   @include media-breakpoint-up(md) {
     max-width: none;
   }
+
+  @media (max-height: 659px) {
+    line-height: 1.25;
+  }
+
 }
 
 .protocol-more-button {
