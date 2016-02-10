@@ -43,15 +43,6 @@
         }
       },
       {
-        "name": "Philippe Honigman",
-        "role": "International Operations",
-        "image_file": "team/Philippe.jpg",
-        "social_profiles": {
-          "linkedin": "https://www.linkedin.com/in/honigman",
-          "twitter": "https://twitter.com/phil_h"
-        }
-      },
-      {
         "name": "Amnon Barnea",
         "role": "Designer",
         "image_file": "team/Amnon.jpg",

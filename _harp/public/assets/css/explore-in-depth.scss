@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
-@import "../../lib/bootstrap/scss/variables";
-@import "../../lib/bootstrap/scss/mixins";
+@import "../../../lib/bootstrap/scss/variables";
+@import "../../../lib/bootstrap/scss/mixins";
 
 body.explore-in-depth {
   @include media-breakpoint-up(lg) {
