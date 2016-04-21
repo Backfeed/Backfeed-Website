@@ -22,5 +22,8 @@
   "dependencies": {
     "gulp": "3.9.0",
     "main-bower-files": "2.11.1"
+  },
+  "devDependencies": {
+    "harp": "^0.20.3"
   }
 }
