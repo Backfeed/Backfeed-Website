@@ -2,7 +2,7 @@ Backfeed.cc built with Harp.js
 ==============================
 
 
-## Getting started
+## Getting Started
 
 1) Install Harp in your computer
 
