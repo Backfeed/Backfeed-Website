@@ -51,29 +51,20 @@
         }
       },
       {
+        "name": "Elad Shtilerman",
+        "role": "Algorithm Developer",
+        "image_file": "team/Elad.jpg",
+        "social_profiles": {
+          "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108"
+        }
+      },
+      {
         "name": "Amnon Barnea",
         "role": "Designer",
         "image_file": "team/Amnon.jpg",
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/amnonbarnea",
           "twitter": "https://www.facebook.com/AmnonBarneaDesign"
-        }
-      },
-      {
-        "name": "Yaniv Keinan",
-        "role": "Developer",
-        "image_file": "team/Yaniv.jpg",
-        "social_profiles": {
-          "linkedin": "https://il.linkedin.com/in/yanivkeinan",
-          "twitter": "https://twitter.com/YanivKeinan"
-        }
-      },
-      {
-        "name": "Adam Goldman",
-        "role": "Developer",
-        "image_file": "team/Adam.jpg",
-        "social_profiles": {
-          "linkedin": "https://www.linkedin.com/pub/adam-goldman/66/631/7a4"
         }
       },
       {
@@ -86,14 +77,6 @@
         }
       },
       {
-        "name": "Naomi Steinitz",
-        "role": "Operations & HR",
-        "image_file": "team/Naomi.jpg",
-        "social_profiles": {
-          "linkedin": "https://www.linkedin.com/pub/naomi-steinitz/18/100/5a3"
-        }
-      },
-      {
         "name": "Julian Feder",
         "role": "Communicator",
         "image_file": "team/Julian.jpg",
@@ -102,11 +85,11 @@
         }
       },
       {
-        "name": "Elad Shtilerman",
-        "role": "Algorithm Developer",
-        "image_file": "team/Elad.jpg",
+        "name": "Naomi Steinitz",
+        "role": "Operations & HR",
+        "image_file": "team/Naomi.jpg",
         "social_profiles": {
-          "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108"
+          "linkedin": "https://www.linkedin.com/pub/naomi-steinitz/18/100/5a3"
         }
       }
     ],
