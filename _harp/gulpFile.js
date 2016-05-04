@@ -4,7 +4,7 @@ var mainBowerFiles = require('main-bower-files');
 gulp.task('bower-extract', function(){
 
     return gulp.src(mainBowerFiles(({ paths: { bowerDirectory: 'lib' } })))
-        .pipe(gulp.dest('public/lib'));
+        .pipe(gulp.dest('../lib/'));
 
 });
 

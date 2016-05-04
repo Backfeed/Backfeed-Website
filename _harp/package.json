@@ -6,7 +6,7 @@
   "scripts": {
     "precompile": "rm -rf ../../.idea && mv ../.idea/ ../..",
     "compile": "harp compile . ..",
-    "postcompile": "cp README.md CNAME .. && mv ../../.idea ..",
+    "postcompile": "cp README.md CNAME .. && mv ../../.idea .. && gulp bower-extract",
     "server": "gulp bower-extract && harp server"
   },
   "repository": {
