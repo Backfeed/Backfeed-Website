@@ -15,14 +15,19 @@ $ sudo npm install -g harp
 $ git clone git@github.com:Backfeed/Backfeed-Website.git
 ```
 
-3) Start Harp server from within the `_harp` directory
+3) Install dependencies
+```
+$ npm install && bower install
+```
+
+4) Start Harp server from within the `_harp` directory
 ```
 $ cd _harp && npm run server
 ```
 
-4) Visit [http://localhost:9000/](http://localhost:9000/) in your browser and follow the instructions in the page
+5) Visit [http://localhost:9000/](http://localhost:9000/) in your browser.
 
-> Tip: Comas and quotes are important when writing JSON. Follow the same structure as the sample data to avoid syntax issues.
+> Tip: Commas and quotes are important when writing JSON. Follow the same structure as the sample data to avoid syntax issues.
 
 ## Publishing & Deploying
 
