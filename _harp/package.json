@@ -4,10 +4,12 @@
   "description": "Backfeed.cc built with Harp.js\r ==============================",
   "main": "../index.html",
   "scripts": {
-    "precompile": "rm -rf ../../.idea && mv ../.idea/ ../..",
+    "precompile": "rm -rf ../../.idea && mv ../.idea/ ../.. 2> /dev/null; true",
     "compile": "harp compile . ..",
-    "postcompile": "cp README.md CNAME .. && mv ../../.idea .. && gulp bower-extract",
-    "server": "gulp bower-extract && harp server"
+    "postcompile": "cp README.md CNAME .. && mv ../../.idea 2> /dev/null; true .. && gulp bower-extract",
+    "server": "gulp bower-extract && harp server",
+    "simple-server": "gulp bower-extract && cd .. && python -m SimpleHTTPServer",
+    "restart": "npm run compile && npm run simple-server"
   },
   "repository": {
     "type": "git",
