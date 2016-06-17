@@ -55,25 +55,8 @@
         "role": "Algorithm Developer",
         "image_file": "team/Elad.jpg",
         "social_profiles": {
-          "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108"
-        }
-      },
-      {
-        "name": "Amnon Barnea",
-        "role": "Designer",
-        "image_file": "team/Amnon.jpg",
-        "social_profiles": {
-          "linkedin": "https://www.linkedin.com/in/amnonbarnea",
-          "twitter": "https://www.facebook.com/AmnonBarneaDesign"
-        }
-      },
-      {
-        "name": "Ore Landau",
-        "role": "Developer",
-        "image_file": "team/Ore.jpg",
-        "social_profiles": {
-          "linkedin": "http://linkedin.com/in/Ore4444",
-          "twitter": "http://twitter.com/Ore4444"
+          "linkedin": "https://il.linkedin.com/in/elad-shtilerman-0bb5a2108",
+          "twitter": "https://twitter.com/EladShtilerman"
         }
       },
       {
@@ -82,14 +65,6 @@
         "image_file": "team/Julian.jpg",
         "social_profiles": {
           "facebook": "https://www.facebook.com/julian.d.feder"
-        }
-      },
-      {
-        "name": "Naomi Steinitz",
-        "role": "Operations & HR",
-        "image_file": "team/Naomi.jpg",
-        "social_profiles": {
-          "linkedin": "https://www.linkedin.com/pub/naomi-steinitz/18/100/5a3"
         }
       }
     ],
@@ -109,6 +84,13 @@
         "social_profiles": {
           "linkedin": "https://www.linkedin.com/in/lisagansky",
           "twitter": "https://twitter.com/instigating"
+        }
+      },
+      {
+        "name": "Vitalik Buterin",
+        "image_file": "advisors/vitalik.jpg",
+        "social_profiles": {
+          "twitter": "https://twitter.com/VitalikButerin"
         }
       }
     ]
