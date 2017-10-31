@@ -23,9 +23,9 @@
   "team": {
     "page_title": "Team",
     "members": [
-      /*
+      
       {
-        "name": "Matan Field",
+        "name": "Matan Fieldttt",
         "role": "CEO & Chief Scientist",
         "image_file": "team/Matan.jpg",
         "social_profiles": {
@@ -60,9 +60,9 @@
           "twitter": "https://twitter.com/EladShtilerman"
         }
       }
-      */
+      
     ],
-    "advisers": [  /*
+    "advisers": [  
       {
         "name": "Jordan Greenhall",
         "image_file": "advisors/Jordan.jpg",
@@ -86,7 +86,7 @@
         "social_profiles": {
           "twitter": "https://twitter.com/VitalikButerin"
         }
-      } */
+      } 
     ]
   },
   "technical-resources": {
